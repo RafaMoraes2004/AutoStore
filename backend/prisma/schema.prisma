@@ -1,12 +1,14 @@
 // schema.prisma
 
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["postgresqlExtensions"]
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider   = "postgresql"
+  url        = env("DATABASE_URL")
+  extensions = [vector]
 }
 
 // Tabela de Carros (Baseada exatamente no JSON fornecido)
@@ -52,9 +54,24 @@ model Lead {
   
   // Chave Estrangeira: O veículo que o cliente se interessou
   carroId   Int
-  carro     Carro    @relation(fields: [carroId], references: [id])
+  carro     Carro    @relation(fields: [carroId], references: [id], onDelete: Restrict)
 
   createdAt DateTime @default(now())
 
   @@map("leads")
+}
+
+// Tabela de Embeddings (corpus vetorizado para o RAG)
+// Cada linha e um "chunk" de texto da base tecnica + seu vetor de 768 dimensoes.
+model Embedding {
+  id         Int                          @id @default(autoincrement())
+  carroId    Int?
+  slug       String?
+  secao      String
+  conteudo   String
+  vetor      Unsupported("vector(768)")?
+  createdAt  DateTime                     @default(now())
+
+  @@index([carroId])
+  @@map("embeddings")
 }
