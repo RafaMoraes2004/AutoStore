@@ -1,0 +1,1773 @@
+{
+  "generated_at": "2026-07-08T18:57:10.757Z",
+  "policy": "Package data is canonical; Firecrawl data is enrichment and must be reviewed before replacing public artifacts.",
+  "source_package_path": "/Users/enzo/dev/fluxomind-hackathon/public-pacote_hackathon-20260706",
+  "vehicles": [
+    {
+      "id": 1,
+      "montadora": "Toyota",
+      "modelo": "Corolla",
+      "categoria": "Sedan",
+      "ano": 2026,
+      "motor": "2.0 Flex (ou Híbrido 1.8)",
+      "potencia_cv": "175 (2.0) / 122 (híbrido)",
+      "cambio": "Automático CVT",
+      "consumo": "~11–14 km/l (híbrido mais econômico)",
+      "preco_a_partir_rs": 160000,
+      "preco_obs": "referência",
+      "cores": "Branco, Prata, Preto, Cinza, Vermelho",
+      "itens": "Porta-malas 470 L, multimídia, pacote de assistências (TSS)",
+      "desc": "Sedan médio Toyota. Versões 2.0 flex de 175 cv e híbrida 1.8 com 122 cv combinados, câmbio CVT. Porta-malas de 470 L.",
+      "imagem_arquivo": "imagens/toyota_corolla.jpg",
+      "imagens": [
+        "imagens/toyota_corolla.jpg",
+        "imagens/toyota_corolla_02.jpg",
+        "imagens/toyota_corolla_03.jpg",
+        "imagens/toyota_corolla_04.jpg"
+      ],
+      "foto_referencia": "https://commons.wikimedia.org/wiki/Category:Toyota_Corolla",
+      "enrichment": {
+        "audience_tags": [
+          "sedan medio",
+          "conforto",
+          "confiabilidade",
+          "familia",
+          "executivo"
+        ],
+        "current_external_observation": null,
+        "faq": [
+          {
+            "answer": "Sim. O pacote do desafio informa motor 2.0 flex ou hibrido 1.8, com potencia de 175 cv no 2.0 e 122 cv na configuracao hibrida.",
+            "question": "O Corolla tem versao hibrida?",
+            "source": "package"
+          },
+          {
+            "answer": "Para quem prioriza conforto, confiabilidade, porta-malas amplo e uma experiencia de sedan medio mais tradicional.",
+            "question": "Para que perfil o Corolla faz mais sentido?",
+            "source": "derived"
+          }
+        ],
+        "generated_at": "2026-07-08T18:57:10.757Z",
+        "official_evidence": [
+          {
+            "claim": "A pagina oficial apresenta o Corolla 2026 com versoes XEi e Altis Premium.",
+            "confidence": "high",
+            "source": "official_page",
+            "url": "https://www.toyota.com.br/modelos/corolla"
+          },
+          {
+            "claim": "A pagina oficial destaca central multimidia de 10 polegadas, conjunto optico full LED e USB-C traseiro.",
+            "confidence": "high",
+            "source": "official_page",
+            "url": "https://www.toyota.com.br/modelos/corolla"
+          }
+        ],
+        "official_model_year_observed": "2026",
+        "official_url": "https://www.toyota.com.br/modelos/corolla",
+        "policy": "External sources enrich context but do not override package prices/specs unless explicitly reviewed.",
+        "retrieval_keywords": [
+          "sedan medio",
+          "corolla hibrido",
+          "porta malas 470 litros",
+          "CVT",
+          "Toyota Safety Sense",
+          "XEi",
+          "Altis Premium"
+        ],
+        "retrieval_text": "Toyota Corolla (2026)\nCategoria: Sedan. Carroceria normalizada: sedan. Propulsao: hybrid_available.\nMotor: 2.0 Flex (ou Híbrido 1.8). Potencia: 175 (2.0) / 122 (híbrido) cv. Cambio: Automático CVT. Consumo/autonomia: ~11–14 km/l (híbrido mais econômico).\nPreco do pacote: a partir de R$ 160.000 (referência).\nCores: Branco, Prata, Preto, Cinza, Vermelho. Itens e versoes: Porta-malas 470 L, multimídia, pacote de assistências (TSS).\nDescricao do pacote: Sedan médio Toyota. Versões 2.0 flex de 175 cv e híbrida 1.8 com 122 cv combinados, câmbio CVT. Porta-malas de 470 L.\nPontos enriquecidos por fonte oficial: A pagina oficial apresenta o Corolla 2026 com versoes XEi e Altis Premium. A pagina oficial destaca central multimidia de 10 polegadas, conjunto optico full LED e USB-C traseiro.\nCasos de uso recomendados: familias que querem sedan confortavel e porta-malas grande uso executivo com foco em conforto e baixa friccao clientes que valorizam seguranca e reputacao de revenda\nTrade-offs: nao entrega a altura de rodagem de um SUV versoes hibridas tendem a ter preco maior que opcoes flex de entrada\nPalavras-chave: sedan medio, corolla hibrido, porta malas 470 litros, CVT, Toyota Safety Sense, XEi, Altis Premium.",
+        "selling_angles": [
+          "sedan medio com versoes flex e hibrida",
+          "porta-malas de 470 L no pacote original",
+          "boa combinacao de conforto, confiabilidade e eficiencia na versao hibrida"
+        ],
+        "source_file_info": {
+          "markdown_bytes": 18372,
+          "markdown_path": "/Users/enzo/dev/fluxomind-hackathon/.scratch/firecrawl-vehicle-research/pages/toyota-corolla.md",
+          "search_bytes": 1648,
+          "search_path": "/Users/enzo/dev/fluxomind-hackathon/.scratch/firecrawl-vehicle-research/search/toyota-corolla.json"
+        },
+        "source_notes": [],
+        "tradeoffs": [
+          "nao entrega a altura de rodagem de um SUV",
+          "versoes hibridas tendem a ter preco maior que opcoes flex de entrada"
+        ],
+        "use_cases": [
+          "familias que querem sedan confortavel e porta-malas grande",
+          "uso executivo com foco em conforto e baixa friccao",
+          "clientes que valorizam seguranca e reputacao de revenda"
+        ]
+      },
+      "normalized": {
+        "body_type": "sedan",
+        "brand": "Toyota",
+        "category_original": "Sedan",
+        "colors": ["Branco", "Prata", "Preto", "Cinza", "Vermelho"],
+        "display_name": "Toyota Corolla",
+        "features": [
+          "Porta-malas 470 L",
+          "multimídia",
+          "pacote de assistências (TSS)"
+        ],
+        "fuel_type": "hybrid_option",
+        "image_files": [
+          "toyota_corolla.jpg",
+          "toyota_corolla_02.jpg",
+          "toyota_corolla_03.jpg",
+          "toyota_corolla_04.jpg"
+        ],
+        "missing_image_files": [],
+        "model": "Corolla",
+        "model_year": 2026,
+        "powertrain_type": "hybrid_available",
+        "price_bucket": "150k-220k",
+        "price_start_brl": 160000
+      },
+      "slug": "toyota-corolla"
+    },
+    {
+      "id": 2,
+      "montadora": "Toyota",
+      "modelo": "Corolla Cross",
+      "categoria": "SUV",
+      "ano": 2026,
+      "motor": "2.0 Flex (ou Híbrido 1.8)",
+      "potencia_cv": "175 (2.0) / 122 (híbrido)",
+      "cambio": "Automático CVT",
+      "consumo": "~10–14 km/l (híbrido mais econômico)",
+      "preco_a_partir_rs": 170790,
+      "preco_obs": "R$ 170.790 a R$ 215.990",
+      "cores": "Branco, Prata, Preto, Cinza, Azul",
+      "itens": "Porta-malas 440 L, TSS, versões XR/XRE/XRX Hybrid",
+      "desc": "SUV médio derivado do Corolla. Motor 2.0 flex de 175 cv ou híbrido 1.8 de 122 cv, CVT. Porta-malas de 440 L. Preço de R$ 170.790 a R$ 215.990.",
+      "imagem_arquivo": "imagens/toyota_corolla_cross.jpg",
+      "imagens": [
+        "imagens/toyota_corolla_cross.jpg",
+        "imagens/toyota_corolla_cross_02.jpg",
+        "imagens/toyota_corolla_cross_03.jpg",
+        "imagens/toyota_corolla_cross_04.jpg"
+      ],
+      "foto_referencia": "https://commons.wikimedia.org/wiki/Category:Toyota_Corolla_Cross",
+      "enrichment": {
+        "audience_tags": [
+          "SUV medio",
+          "familia",
+          "conforto",
+          "hibrido",
+          "seguranca"
+        ],
+        "current_external_observation": null,
+        "faq": [
+          {
+            "answer": "Sim. Ele combina carroceria SUV, porta-malas de 440 L no pacote original e foco em conforto, comodidade e seguranca.",
+            "question": "O Corolla Cross e bom para familia?",
+            "source": "package"
+          },
+          {
+            "answer": "Para o hackathon, prevalece o pacote fornecido: preco a partir de R$ 170.790 e faixa de R$ 170.790 a R$ 215.990.",
+            "question": "Qual dado de preco deve prevalecer?",
+            "source": "package"
+          }
+        ],
+        "generated_at": "2026-07-08T18:57:10.757Z",
+        "official_evidence": [
+          {
+            "claim": "A pagina oficial destaca versoes XRE e XRX para o Corolla Cross atual.",
+            "confidence": "high",
+            "source": "official_page",
+            "url": "https://www.toyota.com.br/modelos/corolla-cross"
+          },
+          {
+            "claim": "A pagina oficial destaca painel digital de 12,3 polegadas, farois de LED e atributos de conforto/comodidade.",
+            "confidence": "high",
+            "source": "official_page",
+            "url": "https://www.toyota.com.br/modelos/corolla-cross"
+          }
+        ],
+        "official_model_year_observed": "2027",
+        "official_url": "https://www.toyota.com.br/modelos/corolla-cross",
+        "policy": "External sources enrich context but do not override package prices/specs unless explicitly reviewed.",
+        "retrieval_keywords": [
+          "SUV medio",
+          "Corolla Cross Hybrid",
+          "porta malas 440 litros",
+          "XRE",
+          "XRX",
+          "painel digital 12,3",
+          "CVT"
+        ],
+        "retrieval_text": "Toyota Corolla Cross (2026)\nCategoria: SUV. Carroceria normalizada: suv. Propulsao: hybrid_available.\nMotor: 2.0 Flex (ou Híbrido 1.8). Potencia: 175 (2.0) / 122 (híbrido) cv. Cambio: Automático CVT. Consumo/autonomia: ~10–14 km/l (híbrido mais econômico).\nPreco do pacote: a partir de R$ 170.790 (R$ 170.790 a R$ 215.990).\nCores: Branco, Prata, Preto, Cinza, Azul. Itens e versoes: Porta-malas 440 L, TSS, versões XR/XRE/XRX Hybrid.\nDescricao do pacote: SUV médio derivado do Corolla. Motor 2.0 flex de 175 cv ou híbrido 1.8 de 122 cv, CVT. Porta-malas de 440 L. Preço de R$ 170.790 a R$ 215.990.\nPontos enriquecidos por fonte oficial: A pagina oficial destaca versoes XRE e XRX para o Corolla Cross atual. A pagina oficial destaca painel digital de 12,3 polegadas, farois de LED e atributos de conforto/comodidade.\nCasos de uso recomendados: familias que preferem posicao de dirigir mais alta uso urbano e rodoviario com foco em conforto cliente que quer SUV com opcao hibrida e reputacao Toyota\nTrade-offs: preco de entrada acima de hatches e sedans compactos o pacote deve deixar claro quando fala de preco 2026 vs pagina oficial atual 2027\nPalavras-chave: SUV medio, Corolla Cross Hybrid, porta malas 440 litros, XRE, XRX, painel digital 12,3, CVT.",
+        "selling_angles": [
+          "SUV medio derivado do Corolla com opcoes flex e hibrida",
+          "porta-malas de 440 L no pacote original",
+          "boa resposta para comparacoes entre SUV, economia e seguranca"
+        ],
+        "source_file_info": {
+          "markdown_bytes": 18142,
+          "markdown_path": "/Users/enzo/dev/fluxomind-hackathon/.scratch/firecrawl-vehicle-research/pages/toyota-corolla-cross.md",
+          "search_bytes": 2044,
+          "search_path": "/Users/enzo/dev/fluxomind-hackathon/.scratch/firecrawl-vehicle-research/search/toyota-corolla-cross.json"
+        },
+        "source_notes": [
+          "Pagina oficial atual mostra linha 2027; o pacote do desafio continua como referencia 2026."
+        ],
+        "tradeoffs": [
+          "preco de entrada acima de hatches e sedans compactos",
+          "o pacote deve deixar claro quando fala de preco 2026 vs pagina oficial atual 2027"
+        ],
+        "use_cases": [
+          "familias que preferem posicao de dirigir mais alta",
+          "uso urbano e rodoviario com foco em conforto",
+          "cliente que quer SUV com opcao hibrida e reputacao Toyota"
+        ]
+      },
+      "normalized": {
+        "body_type": "suv",
+        "brand": "Toyota",
+        "category_original": "SUV",
+        "colors": ["Branco", "Prata", "Preto", "Cinza", "Azul"],
+        "display_name": "Toyota Corolla Cross",
+        "features": ["Porta-malas 440 L", "TSS", "versões XR/XRE/XRX Hybrid"],
+        "fuel_type": "hybrid_option",
+        "image_files": [
+          "toyota_corolla_cross.jpg",
+          "toyota_corolla_cross_02.jpg",
+          "toyota_corolla_cross_03.jpg",
+          "toyota_corolla_cross_04.jpg"
+        ],
+        "missing_image_files": [],
+        "model": "Corolla Cross",
+        "model_year": 2026,
+        "powertrain_type": "hybrid_available",
+        "price_bucket": "150k-220k",
+        "price_start_brl": 170790
+      },
+      "slug": "toyota-corolla-cross"
+    },
+    {
+      "id": 3,
+      "montadora": "Toyota",
+      "modelo": "Hilux",
+      "categoria": "Picape",
+      "ano": 2026,
+      "motor": "2.8 Turbodiesel",
+      "potencia_cv": "204 (GR-S 224)",
+      "cambio": "Automático 6 / 4x4",
+      "consumo": "~9 km/l cidade, ~10 km/l estrada",
+      "preco_a_partir_rs": 242590,
+      "preco_obs": "R$ 242.590 a R$ 334.890",
+      "cores": "Branco, Prata, Preto, Cinza, Vermelho",
+      "itens": "Tração 4x4, reboque até 3.500 kg, versões SR/SRV/SRX/GR-S",
+      "desc": "Picape média cabine dupla. Motor 2.8 turbodiesel de 204 cv (224 cv na GR-S), automático de 6 marchas e tração 4x4. Reboque de até 3.500 kg. Preço de R$ 242.590 a R$ 334.890.",
+      "imagem_arquivo": "imagens/toyota_hilux.jpg",
+      "imagens": [
+        "imagens/toyota_hilux.jpg",
+        "imagens/toyota_hilux_02.jpg",
+        "imagens/toyota_hilux_03.jpg",
+        "imagens/toyota_hilux_04.jpg"
+      ],
+      "foto_referencia": "https://commons.wikimedia.org/wiki/Category:Toyota_HiLux",
+      "enrichment": {
+        "audience_tags": ["picape", "diesel", "4x4", "trabalho", "robustez"],
+        "current_external_observation": null,
+        "faq": [
+          {
+            "answer": "O enriquecimento oficial destaca tracao 4x4 reduzida com acionamento eletronico e bloqueio de diferencial traseiro nas configuracoes descritas.",
+            "question": "A Hilux e 4x4?",
+            "source": "official_page"
+          },
+          {
+            "answer": "Robustez, motor diesel forte, tracao 4x4 e adequacao a trabalho, estrada de terra e uso misto pesado.",
+            "question": "Qual e o principal diferencial da Hilux?",
+            "source": "derived"
+          }
+        ],
+        "generated_at": "2026-07-08T18:57:10.757Z",
+        "official_evidence": [
+          {
+            "claim": "A pagina oficial da Hilux Cabine Dupla 2026 lista versoes STD Power Pack AT, SR AT, SRV AT, SRX AT e SRX Plus AT.",
+            "confidence": "high",
+            "source": "official_page",
+            "url": "https://www.toyota.com.br/modelos/hilux-cabine-dupla"
+          },
+          {
+            "claim": "A pagina oficial descreve motor 2.8L 16V turbo diesel S10, 204 cv, 50,9 kgf.m, transmissao automatica de 6 velocidades, tracao 4x4 reduzida e bloqueio do diferencial traseiro.",
+            "confidence": "high",
+            "source": "official_page",
+            "url": "https://www.toyota.com.br/modelos/hilux-cabine-dupla"
+          }
+        ],
+        "official_model_year_observed": "2026",
+        "official_url": "https://www.toyota.com.br/modelos/hilux-cabine-dupla",
+        "policy": "External sources enrich context but do not override package prices/specs unless explicitly reviewed.",
+        "retrieval_keywords": [
+          "picape diesel",
+          "2.8 turbodiesel",
+          "4x4 reduzida",
+          "bloqueio diferencial",
+          "SRX",
+          "SRV",
+          "Hilux cabine dupla"
+        ],
+        "retrieval_text": "Toyota Hilux (2026)\nCategoria: Picape. Carroceria normalizada: picape. Propulsao: combustion.\nMotor: 2.8 Turbodiesel. Potencia: 204 (GR-S 224) cv. Cambio: Automático 6 / 4x4. Consumo/autonomia: ~9 km/l cidade, ~10 km/l estrada.\nPreco do pacote: a partir de R$ 242.590 (R$ 242.590 a R$ 334.890).\nCores: Branco, Prata, Preto, Cinza, Vermelho. Itens e versoes: Tração 4x4, reboque até 3.500 kg, versões SR/SRV/SRX/GR-S.\nDescricao do pacote: Picape média cabine dupla. Motor 2.8 turbodiesel de 204 cv (224 cv na GR-S), automático de 6 marchas e tração 4x4. Reboque de até 3.500 kg. Preço de R$ 242.590 a R$ 334.890.\nPontos enriquecidos por fonte oficial: A pagina oficial da Hilux Cabine Dupla 2026 lista versoes STD Power Pack AT, SR AT, SRV AT, SRX AT e SRX Plus AT. A pagina oficial descreve motor 2.8L 16V turbo diesel S10, 204 cv, 50,9 kgf.m, transmissao automatica de 6 velocidades, tracao 4x4 reduzida e bloqueio do diferencial traseiro.\nCasos de uso recomendados: uso profissional com carga e pisos ruins fazenda, estrada de terra e rotina fora do asfalto cliente que precisa de tracao 4x4 e robustez\nTrade-offs: maior preco de entrada no catalogo menos pratica para vagas pequenas e uso exclusivamente urbano\nPalavras-chave: picape diesel, 2.8 turbodiesel, 4x4 reduzida, bloqueio diferencial, SRX, SRV, Hilux cabine dupla.",
+        "selling_angles": [
+          "motor 2.8 turbodiesel com foco em torque",
+          "tracao 4x4 reduzida e bloqueio de diferencial nas versoes do pacote oficial",
+          "imagem de robustez e durabilidade"
+        ],
+        "source_file_info": {
+          "markdown_bytes": 19005,
+          "markdown_path": "/Users/enzo/dev/fluxomind-hackathon/.scratch/firecrawl-vehicle-research/pages/toyota-hilux.md",
+          "search_bytes": 2099,
+          "search_path": "/Users/enzo/dev/fluxomind-hackathon/.scratch/firecrawl-vehicle-research/search/toyota-hilux.json"
+        },
+        "source_notes": [],
+        "tradeoffs": [
+          "maior preco de entrada no catalogo",
+          "menos pratica para vagas pequenas e uso exclusivamente urbano"
+        ],
+        "use_cases": [
+          "uso profissional com carga e pisos ruins",
+          "fazenda, estrada de terra e rotina fora do asfalto",
+          "cliente que precisa de tracao 4x4 e robustez"
+        ]
+      },
+      "normalized": {
+        "body_type": "picape",
+        "brand": "Toyota",
+        "category_original": "Picape",
+        "colors": ["Branco", "Prata", "Preto", "Cinza", "Vermelho"],
+        "display_name": "Toyota Hilux",
+        "features": [
+          "Tração 4x4",
+          "reboque até 3.500 kg",
+          "versões SR/SRV/SRX/GR-S"
+        ],
+        "fuel_type": "diesel",
+        "image_files": [
+          "toyota_hilux.jpg",
+          "toyota_hilux_02.jpg",
+          "toyota_hilux_03.jpg",
+          "toyota_hilux_04.jpg"
+        ],
+        "missing_image_files": [],
+        "model": "Hilux",
+        "model_year": 2026,
+        "powertrain_type": "combustion",
+        "price_bucket": "acima-220k",
+        "price_start_brl": 242590
+      },
+      "slug": "toyota-hilux"
+    },
+    {
+      "id": 4,
+      "montadora": "Volkswagen",
+      "modelo": "Polo",
+      "categoria": "Hatch",
+      "ano": 2026,
+      "motor": "1.0 MPI / 1.0 TSI / 1.4 TSI turbo",
+      "potencia_cv": "84 / 116 / 150",
+      "cambio": "Manual 5 ou Automático 6",
+      "consumo": "~11–14 km/l",
+      "preco_a_partir_rs": 107990,
+      "preco_obs": "a partir de ~R$ 107.990",
+      "cores": "Branco, Prata, Preto, Cinza, Vermelho, Azul",
+      "itens": "Multimídia VW Play, versões Sense/TSI/GTS",
+      "desc": "Hatch compacto. Motores 1.0 MPI (84 cv), 1.0 TSI turbo (116 cv) e 1.4 TSI turbo (150 cv), câmbio manual ou automático de 6 marchas. A partir de ~R$ 107.990.",
+      "imagem_arquivo": "imagens/volkswagen_polo.jpg",
+      "imagens": [
+        "imagens/volkswagen_polo.jpg",
+        "imagens/volkswagen_polo_02.jpg",
+        "imagens/volkswagen_polo_03.jpg",
+        "imagens/volkswagen_polo_04.jpg"
+      ],
+      "foto_referencia": "https://commons.wikimedia.org/wiki/Category:Volkswagen_Polo_VI",
+      "enrichment": {
+        "audience_tags": [
+          "hatch",
+          "urbano",
+          "primeiro carro",
+          "tecnologia",
+          "economia"
+        ],
+        "current_external_observation": null,
+        "faq": [
+          {
+            "answer": "Sim. Por ser hatch compacto, tem proposta urbana, consumo competitivo no pacote e porta-malas de 300 L na pagina oficial.",
+            "question": "O Polo e bom para cidade?",
+            "source": "derived"
+          },
+          {
+            "answer": "A pagina oficial destaca VW Play, painel digital e carregador de celular por inducao em versoes.",
+            "question": "Quais tecnologias aparecem no Polo?",
+            "source": "official_page"
+          }
+        ],
+        "generated_at": "2026-07-08T18:57:10.757Z",
+        "official_evidence": [
+          {
+            "claim": "A pagina oficial destaca motor MPI/TSI, potencia de 116 cv no TSI e porta-malas de 300 litros.",
+            "confidence": "high",
+            "source": "official_page",
+            "url": "https://www.vw.com.br/pt/carros/polo.html"
+          },
+          {
+            "claim": "A pagina oficial cita VW Play, painel digital, carregador por inducao e recursos de seguranca como ESC, ISOFIX e assistente de partida em rampa.",
+            "confidence": "high",
+            "source": "official_page",
+            "url": "https://www.vw.com.br/pt/carros/polo.html"
+          }
+        ],
+        "official_model_year_observed": "current",
+        "official_url": "https://www.vw.com.br/pt/carros/polo.html",
+        "policy": "External sources enrich context but do not override package prices/specs unless explicitly reviewed.",
+        "retrieval_keywords": [
+          "hatch urbano",
+          "Polo TSI",
+          "porta malas 300 litros",
+          "VW Play",
+          "ESC",
+          "ISOFIX",
+          "XDS"
+        ],
+        "retrieval_text": "Volkswagen Polo (2026)\nCategoria: Hatch. Carroceria normalizada: hatch. Propulsao: combustion.\nMotor: 1.0 MPI / 1.0 TSI / 1.4 TSI turbo. Potencia: 84 / 116 / 150 cv. Cambio: Manual 5 ou Automático 6. Consumo/autonomia: ~11–14 km/l.\nPreco do pacote: a partir de R$ 107.990 (a partir de ~R$ 107.990).\nCores: Branco, Prata, Preto, Cinza, Vermelho, Azul. Itens e versoes: Multimídia VW Play, versões Sense/TSI/GTS.\nDescricao do pacote: Hatch compacto. Motores 1.0 MPI (84 cv), 1.0 TSI turbo (116 cv) e 1.4 TSI turbo (150 cv), câmbio manual ou automático de 6 marchas. A partir de ~R$ 107.990.\nPontos enriquecidos por fonte oficial: A pagina oficial destaca motor MPI/TSI, potencia de 116 cv no TSI e porta-malas de 300 litros. A pagina oficial cita VW Play, painel digital, carregador por inducao e recursos de seguranca como ESC, ISOFIX e assistente de partida em rampa.\nCasos de uso recomendados: uso urbano diario com facil estacionamento primeiro carro 0 km com boa lista de seguranca cliente que quer hatch compacto com tecnologia embarcada\nTrade-offs: menor porta-malas que sedans e SUVs espaco traseiro mais limitado para familia grande\nPalavras-chave: hatch urbano, Polo TSI, porta malas 300 litros, VW Play, ESC, ISOFIX, XDS.",
+        "selling_angles": [
+          "hatch compacto com motores MPI e TSI",
+          "porta-malas de 300 L indicado na pagina oficial",
+          "VW Play, painel digital e carregador por inducao em versoes"
+        ],
+        "source_file_info": {
+          "markdown_bytes": 27408,
+          "markdown_path": "/Users/enzo/dev/fluxomind-hackathon/.scratch/firecrawl-vehicle-research/pages/volkswagen-polo.md",
+          "search_bytes": 1787,
+          "search_path": "/Users/enzo/dev/fluxomind-hackathon/.scratch/firecrawl-vehicle-research/search/volkswagen-polo.json"
+        },
+        "source_notes": [],
+        "tradeoffs": [
+          "menor porta-malas que sedans e SUVs",
+          "espaco traseiro mais limitado para familia grande"
+        ],
+        "use_cases": [
+          "uso urbano diario com facil estacionamento",
+          "primeiro carro 0 km com boa lista de seguranca",
+          "cliente que quer hatch compacto com tecnologia embarcada"
+        ]
+      },
+      "normalized": {
+        "body_type": "hatch",
+        "brand": "Volkswagen",
+        "category_original": "Hatch",
+        "colors": ["Branco", "Prata", "Preto", "Cinza", "Vermelho", "Azul"],
+        "display_name": "Volkswagen Polo",
+        "features": ["Multimídia VW Play", "versões Sense/TSI/GTS"],
+        "fuel_type": "flex",
+        "image_files": [
+          "volkswagen_polo.jpg",
+          "volkswagen_polo_02.jpg",
+          "volkswagen_polo_03.jpg",
+          "volkswagen_polo_04.jpg"
+        ],
+        "missing_image_files": [],
+        "model": "Polo",
+        "model_year": 2026,
+        "powertrain_type": "combustion",
+        "price_bucket": "ate-110k",
+        "price_start_brl": 107990
+      },
+      "slug": "volkswagen-polo"
+    },
+    {
+      "id": 5,
+      "montadora": "Volkswagen",
+      "modelo": "Virtus",
+      "categoria": "Sedan",
+      "ano": 2026,
+      "motor": "1.0 TSI / 1.4 TSI turbo",
+      "potencia_cv": "116 / 150",
+      "cambio": "Automático 6",
+      "consumo": "~11–14 km/l",
+      "preco_a_partir_rs": 114390,
+      "preco_obs": "a partir de ~R$ 114.390",
+      "cores": "Branco, Prata, Preto, Cinza, Azul",
+      "itens": "Porta-malas 521 L, versões Sense/Comfortline/Highline/Exclusive",
+      "desc": "Sedan compacto. Motores 1.0 TSI (116 cv) e 1.4 TSI (150 cv), automático de 6 marchas. Porta-malas de 521 L. A partir de ~R$ 114.390.",
+      "imagem_arquivo": "imagens/volkswagen_virtus.jpg",
+      "imagens": [
+        "imagens/volkswagen_virtus.jpg",
+        "imagens/volkswagen_virtus_02.jpg",
+        "imagens/volkswagen_virtus_03.jpg",
+        "imagens/volkswagen_virtus_04.jpg"
+      ],
+      "foto_referencia": "https://commons.wikimedia.org/wiki/Category:Volkswagen_Virtus",
+      "enrichment": {
+        "audience_tags": [
+          "sedan compacto",
+          "porta-malas",
+          "familia",
+          "tecnologia",
+          "seguranca"
+        ],
+        "current_external_observation": null,
+        "faq": [
+          {
+            "answer": "O Virtus e uma boa resposta: a pagina oficial informa porta-malas de 521 L.",
+            "question": "Qual carro do catalogo tem porta-malas grande sem ser SUV?",
+            "source": "official_page"
+          },
+          {
+            "answer": "Sim. O Virtus e sedan e tem porta-malas oficial de 521 L, enquanto o Polo tem 300 L.",
+            "question": "O Virtus e mais indicado que o Polo para bagagem?",
+            "source": "official_page"
+          }
+        ],
+        "generated_at": "2026-07-08T18:57:10.757Z",
+        "official_evidence": [
+          {
+            "claim": "A pagina oficial informa motor TSI/200 TSI/250 TSI, potencia de ate 150 cv e porta-malas de 521 litros.",
+            "confidence": "high",
+            "source": "official_page",
+            "url": "https://www.vw.com.br/pt/carros/virtus.html"
+          },
+          {
+            "claim": "A pagina oficial destaca nota maxima em seguranca no Latin NCAP para o Virtus.",
+            "confidence": "high",
+            "source": "official_page",
+            "url": "https://www.vw.com.br/pt/carros/virtus.html"
+          }
+        ],
+        "official_model_year_observed": "current",
+        "official_url": "https://www.vw.com.br/pt/carros/virtus.html",
+        "policy": "External sources enrich context but do not override package prices/specs unless explicitly reviewed.",
+        "retrieval_keywords": [
+          "sedan compacto",
+          "porta malas 521 litros",
+          "Virtus TSI",
+          "Latin NCAP",
+          "Kessy",
+          "Climatronic"
+        ],
+        "retrieval_text": "Volkswagen Virtus (2026)\nCategoria: Sedan. Carroceria normalizada: sedan. Propulsao: combustion.\nMotor: 1.0 TSI / 1.4 TSI turbo. Potencia: 116 / 150 cv. Cambio: Automático 6. Consumo/autonomia: ~11–14 km/l.\nPreco do pacote: a partir de R$ 114.390 (a partir de ~R$ 114.390).\nCores: Branco, Prata, Preto, Cinza, Azul. Itens e versoes: Porta-malas 521 L, versões Sense/Comfortline/Highline/Exclusive.\nDescricao do pacote: Sedan compacto. Motores 1.0 TSI (116 cv) e 1.4 TSI (150 cv), automático de 6 marchas. Porta-malas de 521 L. A partir de ~R$ 114.390.\nPontos enriquecidos por fonte oficial: A pagina oficial informa motor TSI/200 TSI/250 TSI, potencia de ate 150 cv e porta-malas de 521 litros. A pagina oficial destaca nota maxima em seguranca no Latin NCAP para o Virtus.\nCasos de uso recomendados: familias que precisam de porta-malas grande uso de aplicativo/viagens com bagagem cliente que quer sedan compacto com motor turbo\nTrade-offs: nao tem a altura de rodagem de um SUV visual e dirigibilidade sao mais discretos que versoes esportivas de hatch\nPalavras-chave: sedan compacto, porta malas 521 litros, Virtus TSI, Latin NCAP, Kessy, Climatronic.",
+        "selling_angles": [
+          "porta-malas de 521 L indicado na pagina oficial",
+          "linha com motor TSI e potencia de ate 150 cv",
+          "bom candidato em comparacoes de espaco interno e bagagem"
+        ],
+        "source_file_info": {
+          "markdown_bytes": 25392,
+          "markdown_path": "/Users/enzo/dev/fluxomind-hackathon/.scratch/firecrawl-vehicle-research/pages/volkswagen-virtus.md",
+          "search_bytes": 2181,
+          "search_path": "/Users/enzo/dev/fluxomind-hackathon/.scratch/firecrawl-vehicle-research/search/volkswagen-virtus.json"
+        },
+        "source_notes": [],
+        "tradeoffs": [
+          "nao tem a altura de rodagem de um SUV",
+          "visual e dirigibilidade sao mais discretos que versoes esportivas de hatch"
+        ],
+        "use_cases": [
+          "familias que precisam de porta-malas grande",
+          "uso de aplicativo/viagens com bagagem",
+          "cliente que quer sedan compacto com motor turbo"
+        ]
+      },
+      "normalized": {
+        "body_type": "sedan",
+        "brand": "Volkswagen",
+        "category_original": "Sedan",
+        "colors": ["Branco", "Prata", "Preto", "Cinza", "Azul"],
+        "display_name": "Volkswagen Virtus",
+        "features": [
+          "Porta-malas 521 L",
+          "versões Sense/Comfortline/Highline/Exclusive"
+        ],
+        "fuel_type": "flex",
+        "image_files": [
+          "volkswagen_virtus.jpg",
+          "volkswagen_virtus_02.jpg",
+          "volkswagen_virtus_03.jpg",
+          "volkswagen_virtus_04.jpg"
+        ],
+        "missing_image_files": [],
+        "model": "Virtus",
+        "model_year": 2026,
+        "powertrain_type": "combustion",
+        "price_bucket": "110k-150k",
+        "price_start_brl": 114390
+      },
+      "slug": "volkswagen-virtus"
+    },
+    {
+      "id": 6,
+      "montadora": "Volkswagen",
+      "modelo": "T-Cross",
+      "categoria": "SUV",
+      "ano": 2026,
+      "motor": "1.0 TSI / 1.4 TSI turbo",
+      "potencia_cv": "116 / 150",
+      "cambio": "Automático 6",
+      "consumo": "~10–13 km/l",
+      "preco_a_partir_rs": 129990,
+      "preco_obs": "a partir de ~R$ 129.990",
+      "cores": "Branco, Prata, Preto, Cinza, Vermelho",
+      "itens": "Porta-malas 373 L, versões Sense/Comfortline/Highline/Extreme",
+      "desc": "SUV compacto. Motores 1.0 TSI (116 cv) e 1.4 TSI (150 cv), automático de 6 marchas. Porta-malas de 373 L. A partir de ~R$ 129.990.",
+      "imagem_arquivo": "imagens/volkswagen_t_cross.jpg",
+      "imagens": [
+        "imagens/volkswagen_t_cross.jpg",
+        "imagens/volkswagen_t_cross_02.jpg",
+        "imagens/volkswagen_t_cross_03.jpg",
+        "imagens/volkswagen_t_cross_04.jpg"
+      ],
+      "foto_referencia": "https://commons.wikimedia.org/wiki/Category:Volkswagen_T-Cross",
+      "enrichment": {
+        "audience_tags": [
+          "SUV compacto",
+          "familia",
+          "seguranca",
+          "tecnologia",
+          "urbano"
+        ],
+        "current_external_observation": null,
+        "faq": [
+          {
+            "answer": "A pagina oficial destaca 5 estrelas no Latin NCAP, 6 airbags e assistencias como alerta de trafego traseiro, detector de ponto cego e assistente de faixa.",
+            "question": "O T-Cross e seguro?",
+            "source": "official_page"
+          },
+          {
+            "answer": "A pagina oficial informa 373 L a 420 L no padrao VDA, com volume teorico maximo de 414 L a 469 L.",
+            "question": "Qual e a capacidade do porta-malas do T-Cross?",
+            "source": "official_page"
+          }
+        ],
+        "generated_at": "2026-07-08T18:57:10.757Z",
+        "official_evidence": [
+          {
+            "claim": "A pagina oficial informa motores 200 TSI e 250 TSI e porta-malas de 373 L a 420 L (VDA).",
+            "confidence": "high",
+            "source": "official_page",
+            "url": "https://www.vw.com.br/pt/carros/t-cross.html"
+          },
+          {
+            "claim": "A pagina oficial destaca 5 estrelas no Latin NCAP, 6 airbags, alerta de trafego traseiro, detector de ponto cego e assistente de faixa.",
+            "confidence": "high",
+            "source": "official_page",
+            "url": "https://www.vw.com.br/pt/carros/t-cross.html"
+          }
+        ],
+        "official_model_year_observed": "current",
+        "official_url": "https://www.vw.com.br/pt/carros/t-cross.html",
+        "policy": "External sources enrich context but do not override package prices/specs unless explicitly reviewed.",
+        "retrieval_keywords": [
+          "SUV compacto",
+          "T-Cross 200 TSI",
+          "T-Cross 250 TSI",
+          "porta malas 373 420",
+          "Latin NCAP",
+          "VW Play Connect",
+          "Lane Assist"
+        ],
+        "retrieval_text": "Volkswagen T-Cross (2026)\nCategoria: SUV. Carroceria normalizada: suv. Propulsao: combustion.\nMotor: 1.0 TSI / 1.4 TSI turbo. Potencia: 116 / 150 cv. Cambio: Automático 6. Consumo/autonomia: ~10–13 km/l.\nPreco do pacote: a partir de R$ 129.990 (a partir de ~R$ 129.990).\nCores: Branco, Prata, Preto, Cinza, Vermelho. Itens e versoes: Porta-malas 373 L, versões Sense/Comfortline/Highline/Extreme.\nDescricao do pacote: SUV compacto. Motores 1.0 TSI (116 cv) e 1.4 TSI (150 cv), automático de 6 marchas. Porta-malas de 373 L. A partir de ~R$ 129.990.\nPontos enriquecidos por fonte oficial: A pagina oficial informa motores 200 TSI e 250 TSI e porta-malas de 373 L a 420 L (VDA). A pagina oficial destaca 5 estrelas no Latin NCAP, 6 airbags, alerta de trafego traseiro, detector de ponto cego e assistente de faixa.\nCasos de uso recomendados: familia pequena que quer SUV compacto uso urbano com porta-malas versatil cliente que valoriza seguranca ativa e conectividade\nTrade-offs: preco acima de hatches compactos porta-malas pode variar conforme posicao/configuracao dos bancos\nPalavras-chave: SUV compacto, T-Cross 200 TSI, T-Cross 250 TSI, porta malas 373 420, Latin NCAP, VW Play Connect, Lane Assist.",
+        "selling_angles": [
+          "SUV compacto com motores 200 TSI e 250 TSI",
+          "porta-malas flexivel entre 373 L e 420 L conforme metodo VDA na pagina oficial",
+          "forte argumento de seguranca com 5 estrelas Latin NCAP"
+        ],
+        "source_file_info": {
+          "markdown_bytes": 32419,
+          "markdown_path": "/Users/enzo/dev/fluxomind-hackathon/.scratch/firecrawl-vehicle-research/pages/volkswagen-t-cross.md",
+          "search_bytes": 1977,
+          "search_path": "/Users/enzo/dev/fluxomind-hackathon/.scratch/firecrawl-vehicle-research/search/volkswagen-t-cross.json"
+        },
+        "source_notes": [],
+        "tradeoffs": [
+          "preco acima de hatches compactos",
+          "porta-malas pode variar conforme posicao/configuracao dos bancos"
+        ],
+        "use_cases": [
+          "familia pequena que quer SUV compacto",
+          "uso urbano com porta-malas versatil",
+          "cliente que valoriza seguranca ativa e conectividade"
+        ]
+      },
+      "normalized": {
+        "body_type": "suv",
+        "brand": "Volkswagen",
+        "category_original": "SUV",
+        "colors": ["Branco", "Prata", "Preto", "Cinza", "Vermelho"],
+        "display_name": "Volkswagen T-Cross",
+        "features": [
+          "Porta-malas 373 L",
+          "versões Sense/Comfortline/Highline/Extreme"
+        ],
+        "fuel_type": "flex",
+        "image_files": [
+          "volkswagen_t_cross.jpg",
+          "volkswagen_t_cross_02.jpg",
+          "volkswagen_t_cross_03.jpg",
+          "volkswagen_t_cross_04.jpg"
+        ],
+        "missing_image_files": [],
+        "model": "T-Cross",
+        "model_year": 2026,
+        "powertrain_type": "combustion",
+        "price_bucket": "110k-150k",
+        "price_start_brl": 129990
+      },
+      "slug": "volkswagen-t-cross"
+    },
+    {
+      "id": 7,
+      "montadora": "Chevrolet",
+      "modelo": "Onix",
+      "categoria": "Hatch",
+      "ano": 2026,
+      "motor": "1.0 aspirado / 1.0 turbo",
+      "potencia_cv": "82 / 116",
+      "cambio": "Manual 6 ou Automático 6",
+      "consumo": "~12–15 km/l",
+      "preco_a_partir_rs": 99990,
+      "preco_obs": "a partir de R$ 99.990",
+      "cores": "Branco, Prata, Preto, Cinza, Vermelho, Azul",
+      "itens": "Porta-malas 275 L, versões 1.0/LT/Premier/RS",
+      "desc": "Hatch compacto. Motores 1.0 aspirado (82 cv) e 1.0 turbo (116 cv), câmbio manual ou automático de 6 marchas. Porta-malas de 275 L. A partir de R$ 99.990.",
+      "imagem_arquivo": "imagens/chevrolet_onix.jpg",
+      "imagens": [
+        "imagens/chevrolet_onix.jpg",
+        "imagens/chevrolet_onix_02.jpg",
+        "imagens/chevrolet_onix_03.jpg",
+        "imagens/chevrolet_onix_04.jpg"
+      ],
+      "foto_referencia": "https://commons.wikimedia.org/wiki/Category:Chevrolet_Onix",
+      "enrichment": {
+        "audience_tags": [
+          "hatch",
+          "urbano",
+          "conectividade",
+          "custo-beneficio",
+          "seguranca"
+        ],
+        "current_external_observation": "Pagina oficial atual observada com linha 2027 e preco a partir de R$ 99.990, coerente com o pacote, mas com potencia descrita como 115 cv em vez do campo 82/116 do dataset.",
+        "faq": [
+          {
+            "answer": "Sim. A pagina oficial atual destaca MyLink, Wi-Fi nativo e OnStar, alem de integracao com smartphone.",
+            "question": "O Onix tem boa conectividade?",
+            "source": "official_page"
+          },
+          {
+            "answer": "Nao nesta versao enriquecida. Para o desafio, o preco canonico permanece R$ 99.990 conforme pacote original.",
+            "question": "O preco oficial atual substitui o preco do desafio?",
+            "source": "package"
+          }
+        ],
+        "generated_at": "2026-07-08T18:57:10.757Z",
+        "official_evidence": [
+          {
+            "claim": "A pagina oficial atual informa preco a partir de R$ 99.990 para Onix 2027, motor turbo de 115 cv e 16,8 kgfm, MyLink de 11 polegadas e OnStar.",
+            "confidence": "medium",
+            "source": "official_page",
+            "url": "https://www.chevrolet.com.br/carros/novo-onix"
+          },
+          {
+            "claim": "A pagina oficial destaca porta-malas de 303 litros, 6 airbags, controle de estabilidade, alerta de ponto cego e monitoramento de pressao dos pneus.",
+            "confidence": "high",
+            "source": "official_page",
+            "url": "https://www.chevrolet.com.br/carros/novo-onix"
+          }
+        ],
+        "official_model_year_observed": "2027",
+        "official_url": "https://www.chevrolet.com.br/carros/novo-onix",
+        "policy": "External sources enrich context but do not override package prices/specs unless explicitly reviewed.",
+        "retrieval_keywords": [
+          "hatch compacto",
+          "Onix turbo",
+          "MyLink 11",
+          "Wi-Fi nativo",
+          "OnStar",
+          "porta malas 303 litros",
+          "6 airbags"
+        ],
+        "retrieval_text": "Chevrolet Onix (2026)\nCategoria: Hatch. Carroceria normalizada: hatch. Propulsao: combustion.\nMotor: 1.0 aspirado / 1.0 turbo. Potencia: 82 / 116 cv. Cambio: Manual 6 ou Automático 6. Consumo/autonomia: ~12–15 km/l.\nPreco do pacote: a partir de R$ 99.990 (a partir de R$ 99.990).\nCores: Branco, Prata, Preto, Cinza, Vermelho, Azul. Itens e versoes: Porta-malas 275 L, versões 1.0/LT/Premier/RS.\nDescricao do pacote: Hatch compacto. Motores 1.0 aspirado (82 cv) e 1.0 turbo (116 cv), câmbio manual ou automático de 6 marchas. Porta-malas de 275 L. A partir de R$ 99.990.\nPontos enriquecidos por fonte oficial: A pagina oficial atual informa preco a partir de R$ 99.990 para Onix 2027, motor turbo de 115 cv e 16,8 kgfm, MyLink de 11 polegadas e OnStar. A pagina oficial destaca porta-malas de 303 litros, 6 airbags, controle de estabilidade, alerta de ponto cego e monitoramento de pressao dos pneus.\nCasos de uso recomendados: uso urbano diario com bom custo-beneficio cliente que quer conectividade e multimidia moderna primeiro carro ou upgrade de compacto\nTrade-offs: pagina oficial atual traz linha 2027 e pode divergir do dataset 2026 menos espaco de porta-malas que sedans como Virtus e HB20S\nPalavras-chave: hatch compacto, Onix turbo, MyLink 11, Wi-Fi nativo, OnStar, porta malas 303 litros, 6 airbags.",
+        "selling_angles": [
+          "hatch compacto com versoes aspiradas e turbo no pacote",
+          "porta-malas de 303 L na pagina oficial atual",
+          "forte argumento de conectividade com MyLink, Wi-Fi nativo e OnStar"
+        ],
+        "source_file_info": {
+          "markdown_bytes": 68131,
+          "markdown_path": "/Users/enzo/dev/fluxomind-hackathon/.scratch/firecrawl-vehicle-research/pages/chevrolet-onix.md",
+          "search_bytes": 1866,
+          "search_path": "/Users/enzo/dev/fluxomind-hackathon/.scratch/firecrawl-vehicle-research/search/chevrolet-onix.json"
+        },
+        "source_notes": [
+          "Pagina oficial atual mostra Onix 2027; manter valores 2026 do pacote como fonte canonica do desafio."
+        ],
+        "tradeoffs": [
+          "pagina oficial atual traz linha 2027 e pode divergir do dataset 2026",
+          "menos espaco de porta-malas que sedans como Virtus e HB20S"
+        ],
+        "use_cases": [
+          "uso urbano diario com bom custo-beneficio",
+          "cliente que quer conectividade e multimidia moderna",
+          "primeiro carro ou upgrade de compacto"
+        ]
+      },
+      "normalized": {
+        "body_type": "hatch",
+        "brand": "Chevrolet",
+        "category_original": "Hatch",
+        "colors": ["Branco", "Prata", "Preto", "Cinza", "Vermelho", "Azul"],
+        "display_name": "Chevrolet Onix",
+        "features": ["Porta-malas 275 L", "versões 1.0/LT/Premier/RS"],
+        "fuel_type": "flex",
+        "image_files": [
+          "chevrolet_onix.jpg",
+          "chevrolet_onix_02.jpg",
+          "chevrolet_onix_03.jpg",
+          "chevrolet_onix_04.jpg"
+        ],
+        "missing_image_files": [],
+        "model": "Onix",
+        "model_year": 2026,
+        "powertrain_type": "combustion",
+        "price_bucket": "ate-110k",
+        "price_start_brl": 99990
+      },
+      "slug": "chevrolet-onix"
+    },
+    {
+      "id": 8,
+      "montadora": "Chevrolet",
+      "modelo": "Tracker",
+      "categoria": "SUV",
+      "ano": 2026,
+      "motor": "1.0 turbo / 1.2 turbo",
+      "potencia_cv": "116 / 141",
+      "cambio": "Automático 6",
+      "consumo": "~10–13 km/l",
+      "preco_a_partir_rs": 129000,
+      "preco_obs": "a partir de ~R$ 129.000",
+      "cores": "Branco, Prata, Preto, Cinza, Vermelho",
+      "itens": "Porta-malas 393 L, versões LT/LTZ/Premier/RS",
+      "desc": "SUV compacto. Motores 1.0 turbo (116 cv) e 1.2 turbo (141 cv), automático de 6 marchas. Porta-malas de 393 L. A partir de ~R$ 129.000.",
+      "imagem_arquivo": "imagens/chevrolet_tracker.jpg",
+      "imagens": [
+        "imagens/chevrolet_tracker.jpg",
+        "imagens/chevrolet_tracker_02.jpg",
+        "imagens/chevrolet_tracker_03.jpg",
+        "imagens/chevrolet_tracker_04.jpg"
+      ],
+      "foto_referencia": "https://commons.wikimedia.org/wiki/Category:Chevrolet_Tracker_(4th_generation)",
+      "enrichment": {
+        "audience_tags": [
+          "SUV compacto",
+          "familia",
+          "conectividade",
+          "seguranca",
+          "turbo"
+        ],
+        "current_external_observation": null,
+        "faq": [
+          {
+            "answer": "A pagina oficial atual destaca alerta de colisao com frenagem automatica, alerta de pedestres/ciclistas e alerta de ponto cego.",
+            "question": "O Tracker tem assistencias de seguranca?",
+            "source": "official_page"
+          },
+          {
+            "answer": "O pacote informa motor 1.0 turbo / 1.2 turbo, potencia 116 / 141 cv e preco a partir de R$ 129.000.",
+            "question": "Qual motor aparece no pacote do desafio?",
+            "source": "package"
+          }
+        ],
+        "generated_at": "2026-07-08T18:57:10.757Z",
+        "official_evidence": [
+          {
+            "claim": "A pagina oficial atual destaca motor turbo com injecao direta e ate 141 cv.",
+            "confidence": "high",
+            "source": "official_page",
+            "url": "https://www.chevrolet.com.br/suvs/novo-tracker"
+          },
+          {
+            "claim": "A pagina oficial atual destaca OnStar, Wi-Fi nativo, MyLink de 11 polegadas, alerta de colisao com frenagem automatica, alerta de pedestres/ciclistas e alerta de ponto cego.",
+            "confidence": "high",
+            "source": "official_page",
+            "url": "https://www.chevrolet.com.br/suvs/novo-tracker"
+          }
+        ],
+        "official_model_year_observed": "2027",
+        "official_url": "https://www.chevrolet.com.br/suvs/novo-tracker",
+        "policy": "External sources enrich context but do not override package prices/specs unless explicitly reviewed.",
+        "retrieval_keywords": [
+          "SUV compacto",
+          "Tracker turbo",
+          "141 cv",
+          "MyLink 11",
+          "OnStar",
+          "Wi-Fi nativo",
+          "alerta ponto cego",
+          "frenagem automatica"
+        ],
+        "retrieval_text": "Chevrolet Tracker (2026)\nCategoria: SUV. Carroceria normalizada: suv. Propulsao: combustion.\nMotor: 1.0 turbo / 1.2 turbo. Potencia: 116 / 141 cv. Cambio: Automático 6. Consumo/autonomia: ~10–13 km/l.\nPreco do pacote: a partir de R$ 129.000 (a partir de ~R$ 129.000).\nCores: Branco, Prata, Preto, Cinza, Vermelho. Itens e versoes: Porta-malas 393 L, versões LT/LTZ/Premier/RS.\nDescricao do pacote: SUV compacto. Motores 1.0 turbo (116 cv) e 1.2 turbo (141 cv), automático de 6 marchas. Porta-malas de 393 L. A partir de ~R$ 129.000.\nPontos enriquecidos por fonte oficial: A pagina oficial atual destaca motor turbo com injecao direta e ate 141 cv. A pagina oficial atual destaca OnStar, Wi-Fi nativo, MyLink de 11 polegadas, alerta de colisao com frenagem automatica, alerta de pedestres/ciclistas e alerta de ponto cego.\nCasos de uso recomendados: familias que querem SUV compacto conectado uso urbano com porta-malas versatil cliente que valoriza seguranca ativa e multimidia moderna\nTrade-offs: preco acima de hatches compactos pagina oficial atual 2027 pode divergir de preco/versoes 2026 do pacote\nPalavras-chave: SUV compacto, Tracker turbo, 141 cv, MyLink 11, OnStar, Wi-Fi nativo, alerta ponto cego, frenagem automatica.",
+        "selling_angles": [
+          "SUV compacto com motores turbo no pacote",
+          "pagina oficial atual destaca motor turbo com injecao direta de ate 141 cv",
+          "OnStar, Wi-Fi nativo e MyLink de 11 polegadas fortalecem perguntas sobre conectividade"
+        ],
+        "source_file_info": {
+          "markdown_bytes": 66015,
+          "markdown_path": "/Users/enzo/dev/fluxomind-hackathon/.scratch/firecrawl-vehicle-research/pages/chevrolet-tracker.md",
+          "search_bytes": 1840,
+          "search_path": "/Users/enzo/dev/fluxomind-hackathon/.scratch/firecrawl-vehicle-research/search/chevrolet-tracker.json"
+        },
+        "source_notes": [
+          "Pagina oficial atual mostra Tracker 2027; manter valores 2026 do pacote como fonte canonica do desafio."
+        ],
+        "tradeoffs": [
+          "preco acima de hatches compactos",
+          "pagina oficial atual 2027 pode divergir de preco/versoes 2026 do pacote"
+        ],
+        "use_cases": [
+          "familias que querem SUV compacto conectado",
+          "uso urbano com porta-malas versatil",
+          "cliente que valoriza seguranca ativa e multimidia moderna"
+        ]
+      },
+      "normalized": {
+        "body_type": "suv",
+        "brand": "Chevrolet",
+        "category_original": "SUV",
+        "colors": ["Branco", "Prata", "Preto", "Cinza", "Vermelho"],
+        "display_name": "Chevrolet Tracker",
+        "features": ["Porta-malas 393 L", "versões LT/LTZ/Premier/RS"],
+        "fuel_type": "flex",
+        "image_files": [
+          "chevrolet_tracker.jpg",
+          "chevrolet_tracker_02.jpg",
+          "chevrolet_tracker_03.jpg",
+          "chevrolet_tracker_04.jpg"
+        ],
+        "missing_image_files": [],
+        "model": "Tracker",
+        "model_year": 2026,
+        "powertrain_type": "combustion",
+        "price_bucket": "110k-150k",
+        "price_start_brl": 129000
+      },
+      "slug": "chevrolet-tracker"
+    },
+    {
+      "id": 9,
+      "montadora": "Chevrolet",
+      "modelo": "Montana",
+      "categoria": "Picape",
+      "ano": 2026,
+      "motor": "1.2 turbo",
+      "potencia_cv": "133",
+      "cambio": "Automático 6",
+      "consumo": "~10–13 km/l",
+      "preco_a_partir_rs": 128000,
+      "preco_obs": "referência (~R$ 128.000)",
+      "cores": "Branco, Prata, Preto, Cinza, Vermelho",
+      "itens": "Caçamba ~874 L, versões LT/LTZ/Premier/RS",
+      "desc": "Picape compacta. Motor 1.2 turbo de 133 cv, automático de 6 marchas. Boa capacidade de caçamba. Preço de referência a partir de ~R$ 128.000.",
+      "imagem_arquivo": "imagens/chevrolet_montana.jpg",
+      "imagens": [
+        "imagens/chevrolet_montana.jpg",
+        "imagens/chevrolet_montana_02.jpg",
+        "imagens/chevrolet_montana_03.jpg",
+        "imagens/chevrolet_montana_04.jpg"
+      ],
+      "foto_referencia": "https://commons.wikimedia.org/wiki/Category:Chevrolet_Montana",
+      "enrichment": {
+        "audience_tags": [
+          "picape compacta",
+          "trabalho leve",
+          "familia",
+          "caçamba",
+          "turbo"
+        ],
+        "current_external_observation": "Pagina oficial atual observada com linha 2027 e preco a partir de R$ 133.090; pacote do desafio segue R$ 128.000.",
+        "faq": [
+          {
+            "answer": "Nao exatamente. A Montana e uma picape compacta para uso misto e carga leve; a Hilux e mais adequada para trabalho pesado, diesel e 4x4.",
+            "question": "A Montana substitui uma Hilux?",
+            "source": "derived"
+          },
+          {
+            "answer": "A pagina oficial atual destaca a caçamba Multi-Flex de ate 874 litros e recursos como ganchos, iluminacao e divisorias Multi-Board.",
+            "question": "Qual e o diferencial de carga da Montana?",
+            "source": "official_page"
+          }
+        ],
+        "generated_at": "2026-07-08T18:57:10.757Z",
+        "official_evidence": [
+          {
+            "claim": "A pagina oficial atual destaca motor 1.2 turbo de 141 cv e 22,9 kgfm.",
+            "confidence": "high",
+            "source": "official_page",
+            "url": "https://www.chevrolet.com.br/picapes/chevrolet-montana"
+          },
+          {
+            "claim": "A pagina oficial atual destaca caçamba Multi-Flex de ate 874 litros, 8 ganchos de amarracao, tampa com alivio de peso, iluminacao lateral dupla e capota maritima.",
+            "confidence": "high",
+            "source": "official_page",
+            "url": "https://www.chevrolet.com.br/picapes/chevrolet-montana"
+          }
+        ],
+        "official_model_year_observed": "2027",
+        "official_url": "https://www.chevrolet.com.br/picapes/chevrolet-montana",
+        "policy": "External sources enrich context but do not override package prices/specs unless explicitly reviewed.",
+        "retrieval_keywords": [
+          "picape compacta",
+          "Montana 1.2 turbo",
+          "caçamba Multi-Flex",
+          "874 litros",
+          "MyLink 11",
+          "OnStar",
+          "22,9 kgfm"
+        ],
+        "retrieval_text": "Chevrolet Montana (2026)\nCategoria: Picape. Carroceria normalizada: picape. Propulsao: combustion.\nMotor: 1.2 turbo. Potencia: 133 cv. Cambio: Automático 6. Consumo/autonomia: ~10–13 km/l.\nPreco do pacote: a partir de R$ 128.000 (referência (~R$ 128.000)).\nCores: Branco, Prata, Preto, Cinza, Vermelho. Itens e versoes: Caçamba ~874 L, versões LT/LTZ/Premier/RS.\nDescricao do pacote: Picape compacta. Motor 1.2 turbo de 133 cv, automático de 6 marchas. Boa capacidade de caçamba. Preço de referência a partir de ~R$ 128.000.\nPontos enriquecidos por fonte oficial: A pagina oficial atual destaca motor 1.2 turbo de 141 cv e 22,9 kgfm. A pagina oficial atual destaca caçamba Multi-Flex de ate 874 litros, 8 ganchos de amarracao, tampa com alivio de peso, iluminacao lateral dupla e capota maritima.\nCasos de uso recomendados: cliente que precisa de caçamba sem ir para picape media diesel uso misto trabalho/familia transporte leve com mais versatilidade que hatch ou sedan\nTrade-offs: menos robusta para uso pesado que Hilux pagina oficial atual 2027 mostra preco superior ao pacote 2026\nPalavras-chave: picape compacta, Montana 1.2 turbo, caçamba Multi-Flex, 874 litros, MyLink 11, OnStar, 22,9 kgfm.",
+        "selling_angles": [
+          "picape compacta com motor 1.2 turbo no pacote",
+          "pagina oficial atual destaca caçamba Multi-Flex de ate 874 L",
+          "boa resposta para clientes que perguntam sobre carga leve e praticidade"
+        ],
+        "source_file_info": {
+          "markdown_bytes": 58986,
+          "markdown_path": "/Users/enzo/dev/fluxomind-hackathon/.scratch/firecrawl-vehicle-research/pages/chevrolet-montana.md",
+          "search_bytes": 1671,
+          "search_path": "/Users/enzo/dev/fluxomind-hackathon/.scratch/firecrawl-vehicle-research/search/chevrolet-montana.json"
+        },
+        "source_notes": [
+          "Pagina oficial atual mostra Montana 2027; manter valores 2026 do pacote como fonte canonica do desafio."
+        ],
+        "tradeoffs": [
+          "menos robusta para uso pesado que Hilux",
+          "pagina oficial atual 2027 mostra preco superior ao pacote 2026"
+        ],
+        "use_cases": [
+          "cliente que precisa de caçamba sem ir para picape media diesel",
+          "uso misto trabalho/familia",
+          "transporte leve com mais versatilidade que hatch ou sedan"
+        ]
+      },
+      "normalized": {
+        "body_type": "picape",
+        "brand": "Chevrolet",
+        "category_original": "Picape",
+        "colors": ["Branco", "Prata", "Preto", "Cinza", "Vermelho"],
+        "display_name": "Chevrolet Montana",
+        "features": ["Caçamba ~874 L", "versões LT/LTZ/Premier/RS"],
+        "fuel_type": "flex",
+        "image_files": [
+          "chevrolet_montana.jpg",
+          "chevrolet_montana_02.jpg",
+          "chevrolet_montana_03.jpg",
+          "chevrolet_montana_04.jpg"
+        ],
+        "missing_image_files": [],
+        "model": "Montana",
+        "model_year": 2026,
+        "powertrain_type": "combustion",
+        "price_bucket": "110k-150k",
+        "price_start_brl": 128000
+      },
+      "slug": "chevrolet-montana"
+    },
+    {
+      "id": 10,
+      "montadora": "Hyundai",
+      "modelo": "HB20",
+      "categoria": "Hatch",
+      "ano": 2026,
+      "motor": "1.0 aspirado / 1.0 turbo",
+      "potencia_cv": "80 / 120",
+      "cambio": "Manual 5 ou Automático 6",
+      "consumo": "~12–15 km/l",
+      "preco_a_partir_rs": 95790,
+      "preco_obs": "R$ 95.790 a R$ 129.650",
+      "cores": "Branco, Prata, Preto, Cinza, Azul, Vermelho",
+      "itens": "Porta-malas 300 L, versões Sense/Comfort/Limited/Platinum",
+      "desc": "Hatch compacto. Motores 1.0 aspirado (80 cv) e 1.0 turbo (120 cv), manual ou automático de 6 marchas. Porta-malas de 300 L. Preço de R$ 95.790 a R$ 129.650.",
+      "imagem_arquivo": "imagens/hyundai_hb20.jpg",
+      "imagens": ["imagens/hyundai_hb20.jpg", "imagens/hyundai_hb20_02.jpg"],
+      "foto_referencia": "https://commons.wikimedia.org/wiki/Category:Hyundai_HB20_(BR2)",
+      "enrichment": {
+        "audience_tags": [
+          "hatch",
+          "urbano",
+          "seguranca ativa",
+          "Bluelink",
+          "compacto"
+        ],
+        "current_external_observation": null,
+        "faq": [
+          {
+            "answer": "A pagina oficial atual destaca recursos como frenagem autonoma, assistente de permanencia/centralizacao em faixa, trafego cruzado traseiro e ponto cego em versoes.",
+            "question": "O HB20 tem recursos de seguranca ativa?",
+            "source": "official_page"
+          },
+          {
+            "answer": "O HB20 e mais compacto e urbano; o Creta e SUV, maior e mais indicado para quem prioriza espaco e posicao de dirigir alta.",
+            "question": "Qual carro e mais urbano: HB20 ou Creta?",
+            "source": "derived"
+          }
+        ],
+        "generated_at": "2026-07-08T18:57:10.757Z",
+        "official_evidence": [
+          {
+            "claim": "A pagina oficial atual destaca motor Kappa 1.0 Turbo GDI Flex de 120 cv e 17,5 kgfm, alem de motor Kappa 1.0 Flex.",
+            "confidence": "high",
+            "source": "official_page",
+            "url": "https://www.hyundai.com.br/veiculos/novo-hyundai-hb20.html"
+          },
+          {
+            "claim": "A pagina oficial atual destaca FCA, SEW, LFA/LKA, RCCA, BCA, Bluelink e painel digital LCD de 10 polegadas em versoes.",
+            "confidence": "high",
+            "source": "official_page",
+            "url": "https://www.hyundai.com.br/veiculos/novo-hyundai-hb20.html"
+          }
+        ],
+        "official_model_year_observed": "2026/2027",
+        "official_url": "https://www.hyundai.com.br/veiculos/novo-hyundai-hb20.html",
+        "policy": "External sources enrich context but do not override package prices/specs unless explicitly reviewed.",
+        "retrieval_keywords": [
+          "hatch compacto",
+          "HB20",
+          "Kappa 1.0",
+          "Kappa 1.0 Turbo GDI",
+          "Hyundai SmartSense",
+          "Bluelink",
+          "FCA",
+          "LFA",
+          "LKA",
+          "RCCA",
+          "BCA"
+        ],
+        "retrieval_text": "Hyundai HB20 (2026)\nCategoria: Hatch. Carroceria normalizada: hatch. Propulsao: combustion.\nMotor: 1.0 aspirado / 1.0 turbo. Potencia: 80 / 120 cv. Cambio: Manual 5 ou Automático 6. Consumo/autonomia: ~12–15 km/l.\nPreco do pacote: a partir de R$ 95.790 (R$ 95.790 a R$ 129.650).\nCores: Branco, Prata, Preto, Cinza, Azul, Vermelho. Itens e versoes: Porta-malas 300 L, versões Sense/Comfort/Limited/Platinum.\nDescricao do pacote: Hatch compacto. Motores 1.0 aspirado (80 cv) e 1.0 turbo (120 cv), manual ou automático de 6 marchas. Porta-malas de 300 L. Preço de R$ 95.790 a R$ 129.650.\nPontos enriquecidos por fonte oficial: A pagina oficial atual destaca motor Kappa 1.0 Turbo GDI Flex de 120 cv e 17,5 kgfm, alem de motor Kappa 1.0 Flex. A pagina oficial atual destaca FCA, SEW, LFA/LKA, RCCA, BCA, Bluelink e painel digital LCD de 10 polegadas em versoes.\nCasos de uso recomendados: uso urbano com hatch compacto cliente que quer bom pacote de seguranca ativa primeiro carro com conectividade e manutencao simples\nTrade-offs: porta-malas e espaco inferiores aos sedans/SUVs pagina oficial atual usa potencia 120 cv para motor turbo GDI, enquanto pacote resume 80/120\nPalavras-chave: hatch compacto, HB20, Kappa 1.0, Kappa 1.0 Turbo GDI, Hyundai SmartSense, Bluelink, FCA, LFA, LKA, RCCA, BCA.",
+        "selling_angles": [
+          "hatch compacto com opcoes 1.0 aspirado e 1.0 turbo no pacote",
+          "pagina oficial atual destaca Hyundai SmartSense em recursos como FCA, LFA/LKA, RCCA e BCA",
+          "cores oficiais incluem Branco Atlas, Preto Onix, Prata Brisk, Prata Sand, Cinza Silk, Cinza Shadow e Azul Sapphire"
+        ],
+        "source_file_info": {
+          "markdown_bytes": 99740,
+          "markdown_path": "/Users/enzo/dev/fluxomind-hackathon/.scratch/firecrawl-vehicle-research/pages/hyundai-hb20.md",
+          "search_bytes": 1928,
+          "search_path": "/Users/enzo/dev/fluxomind-hackathon/.scratch/firecrawl-vehicle-research/search/hyundai-hb20.json"
+        },
+        "source_notes": [
+          "Pagina oficial atual mostra ofertas/catalogos 2026/2027; manter valores 2026 do pacote como fonte canonica do desafio."
+        ],
+        "tradeoffs": [
+          "porta-malas e espaco inferiores aos sedans/SUVs",
+          "pagina oficial atual usa potencia 120 cv para motor turbo GDI, enquanto pacote resume 80/120"
+        ],
+        "use_cases": [
+          "uso urbano com hatch compacto",
+          "cliente que quer bom pacote de seguranca ativa",
+          "primeiro carro com conectividade e manutencao simples"
+        ]
+      },
+      "normalized": {
+        "body_type": "hatch",
+        "brand": "Hyundai",
+        "category_original": "Hatch",
+        "colors": ["Branco", "Prata", "Preto", "Cinza", "Azul", "Vermelho"],
+        "display_name": "Hyundai HB20",
+        "features": [
+          "Porta-malas 300 L",
+          "versões Sense/Comfort/Limited/Platinum"
+        ],
+        "fuel_type": "flex",
+        "image_files": ["hyundai_hb20.jpg", "hyundai_hb20_02.jpg"],
+        "missing_image_files": [],
+        "model": "HB20",
+        "model_year": 2026,
+        "powertrain_type": "combustion",
+        "price_bucket": "ate-110k",
+        "price_start_brl": 95790
+      },
+      "slug": "hyundai-hb20"
+    },
+    {
+      "id": 11,
+      "montadora": "Hyundai",
+      "modelo": "HB20S",
+      "categoria": "Sedan",
+      "ano": 2026,
+      "motor": "1.0 aspirado / 1.0 turbo",
+      "potencia_cv": "80 / 120",
+      "cambio": "Manual 5 ou Automático 6",
+      "consumo": "~12–15 km/l",
+      "preco_a_partir_rs": 104290,
+      "preco_obs": "R$ 104.290 a R$ 135.310",
+      "cores": "Branco, Prata, Preto, Cinza, Azul",
+      "itens": "Porta-malas 475 L, versões Sense/Comfort/Limited/Platinum",
+      "desc": "Sedan compacto. Mesmas motorizações do HB20: 1.0 aspirado (80 cv) e 1.0 turbo (120 cv). Porta-malas de 475 L. Preço de R$ 104.290 a R$ 135.310.",
+      "imagem_arquivo": "imagens/hyundai_hb20s.jpg",
+      "imagens": ["imagens/hyundai_hb20s.jpg", "imagens/hyundai_hb20s_02.jpg"],
+      "foto_referencia": "https://commons.wikimedia.org/wiki/Category:Hyundai_HB20",
+      "enrichment": {
+        "audience_tags": [
+          "sedan compacto",
+          "porta-malas",
+          "urbano",
+          "seguranca ativa",
+          "Bluelink"
+        ],
+        "current_external_observation": null,
+        "faq": [
+          {
+            "answer": "O HB20S e sedan e o pacote informa porta-malas de 475 L, enquanto o HB20 e hatch e mais compacto para cidade.",
+            "question": "Qual a diferenca pratica entre HB20 e HB20S?",
+            "source": "package"
+          },
+          {
+            "answer": "Ele conversa diretamente com Virtus e Onix Plus-like em perfil sedan compacto, e pode ser comparado com Corolla por tipo de carroceria, embora em segmento inferior.",
+            "question": "O HB20S concorre com qual carro do catalogo?",
+            "source": "derived"
+          }
+        ],
+        "generated_at": "2026-07-08T18:57:10.757Z",
+        "official_evidence": [
+          {
+            "claim": "A pagina oficial atual destaca motor Kappa 1.0 Turbo GDI Flex de 120 cv e 17,5 kgfm, alem de Kappa 1.0 Flex.",
+            "confidence": "high",
+            "source": "official_page",
+            "url": "https://www.hyundai.com.br/veiculos/novo-hyundai-hb20s.html"
+          },
+          {
+            "claim": "A pagina oficial atual destaca Hyundai SmartSense, Bluelink, ar-condicionado digital, rodas de 16 polegadas e motor turbo GDI de 120 cv em versoes.",
+            "confidence": "high",
+            "source": "official_page",
+            "url": "https://www.hyundai.com.br/veiculos/novo-hyundai-hb20s.html"
+          }
+        ],
+        "official_model_year_observed": "2026/2027",
+        "official_url": "https://www.hyundai.com.br/veiculos/novo-hyundai-hb20s.html",
+        "policy": "External sources enrich context but do not override package prices/specs unless explicitly reviewed.",
+        "retrieval_keywords": [
+          "sedan compacto",
+          "HB20S",
+          "porta malas 475 litros",
+          "Kappa 1.0 Turbo GDI",
+          "Bluelink",
+          "SmartSense",
+          "FCA",
+          "RCCA"
+        ],
+        "retrieval_text": "Hyundai HB20S (2026)\nCategoria: Sedan. Carroceria normalizada: sedan. Propulsao: combustion.\nMotor: 1.0 aspirado / 1.0 turbo. Potencia: 80 / 120 cv. Cambio: Manual 5 ou Automático 6. Consumo/autonomia: ~12–15 km/l.\nPreco do pacote: a partir de R$ 104.290 (R$ 104.290 a R$ 135.310).\nCores: Branco, Prata, Preto, Cinza, Azul. Itens e versoes: Porta-malas 475 L, versões Sense/Comfort/Limited/Platinum.\nDescricao do pacote: Sedan compacto. Mesmas motorizações do HB20: 1.0 aspirado (80 cv) e 1.0 turbo (120 cv). Porta-malas de 475 L. Preço de R$ 104.290 a R$ 135.310.\nPontos enriquecidos por fonte oficial: A pagina oficial atual destaca motor Kappa 1.0 Turbo GDI Flex de 120 cv e 17,5 kgfm, alem de Kappa 1.0 Flex. A pagina oficial atual destaca Hyundai SmartSense, Bluelink, ar-condicionado digital, rodas de 16 polegadas e motor turbo GDI de 120 cv em versoes.\nCasos de uso recomendados: cliente que gosta do HB20 mas precisa de mais porta-malas familia pequena com rotina urbana uso de viagem curta com bagagem\nTrade-offs: menos alto que SUV e menos robusto que picape porta-malas menor que Virtus, mas maior que hatches do catalogo\nPalavras-chave: sedan compacto, HB20S, porta malas 475 litros, Kappa 1.0 Turbo GDI, Bluelink, SmartSense, FCA, RCCA.",
+        "selling_angles": [
+          "sedan compacto com porta-malas de 475 L no pacote original",
+          "mesmas familias de motores do HB20 no pacote",
+          "bom candidato para comparacao direta com Virtus e Corolla em custo/espaco"
+        ],
+        "source_file_info": {
+          "markdown_bytes": 99393,
+          "markdown_path": "/Users/enzo/dev/fluxomind-hackathon/.scratch/firecrawl-vehicle-research/pages/hyundai-hb20s.md",
+          "search_bytes": 1949,
+          "search_path": "/Users/enzo/dev/fluxomind-hackathon/.scratch/firecrawl-vehicle-research/search/hyundai-hb20s.json"
+        },
+        "source_notes": [
+          "Pagina oficial atual mostra ofertas/catalogos 2026/2027; manter valores 2026 do pacote como fonte canonica do desafio."
+        ],
+        "tradeoffs": [
+          "menos alto que SUV e menos robusto que picape",
+          "porta-malas menor que Virtus, mas maior que hatches do catalogo"
+        ],
+        "use_cases": [
+          "cliente que gosta do HB20 mas precisa de mais porta-malas",
+          "familia pequena com rotina urbana",
+          "uso de viagem curta com bagagem"
+        ]
+      },
+      "normalized": {
+        "body_type": "sedan",
+        "brand": "Hyundai",
+        "category_original": "Sedan",
+        "colors": ["Branco", "Prata", "Preto", "Cinza", "Azul"],
+        "display_name": "Hyundai HB20S",
+        "features": [
+          "Porta-malas 475 L",
+          "versões Sense/Comfort/Limited/Platinum"
+        ],
+        "fuel_type": "flex",
+        "image_files": ["hyundai_hb20s.jpg", "hyundai_hb20s_02.jpg"],
+        "missing_image_files": [],
+        "model": "HB20S",
+        "model_year": 2026,
+        "powertrain_type": "combustion",
+        "price_bucket": "ate-110k",
+        "price_start_brl": 104290
+      },
+      "slug": "hyundai-hb20s"
+    },
+    {
+      "id": 12,
+      "montadora": "Hyundai",
+      "modelo": "Creta",
+      "categoria": "SUV",
+      "ano": 2026,
+      "motor": "1.0 turbo (e 1.6/2.0 conforme versão)",
+      "potencia_cv": "120 (1.0 turbo)",
+      "cambio": "Automático 6",
+      "consumo": "~10–13 km/l",
+      "preco_a_partir_rs": 149620,
+      "preco_obs": "R$ 149.620 a R$ 198.120",
+      "cores": "Branco, Prata, Preto, Cinza, Vermelho",
+      "itens": "Bluelink de série, versões Comfort/Limited/Platinum/N Line/Ultimate",
+      "desc": "SUV compacto. Motor 1.0 turbo de 120 cv (opções 1.6/2.0 por versão), automático de 6 marchas. Bluelink de série. Preço de R$ 149.620 a R$ 198.120.",
+      "imagem_arquivo": "imagens/hyundai_creta.jpg",
+      "imagens": [
+        "imagens/hyundai_creta.jpg",
+        "imagens/hyundai_creta_02.jpg",
+        "imagens/hyundai_creta_03.jpg",
+        "imagens/hyundai_creta_04.jpg"
+      ],
+      "foto_referencia": "https://commons.wikimedia.org/wiki/Category:Hyundai_Creta_(SU2)",
+      "enrichment": {
+        "audience_tags": [
+          "SUV compacto",
+          "familia",
+          "seguranca ativa",
+          "Bluelink",
+          "porta-malas"
+        ],
+        "current_external_observation": null,
+        "faq": [
+          {
+            "answer": "Sim. A pagina oficial atual informa 422 L, podendo chegar a 1.401 L com configuracao dos bancos.",
+            "question": "O Creta tem bom porta-malas?",
+            "source": "official_page"
+          },
+          {
+            "answer": "Na pagina oficial atual, o Creta tem versao Gamma 1.6 Turbo GDI de 176 cv, acima dos 120 cv do HB20 turbo.",
+            "question": "O Creta e mais potente que o HB20?",
+            "source": "official_page"
+          }
+        ],
+        "generated_at": "2026-07-08T18:57:10.757Z",
+        "official_evidence": [
+          {
+            "claim": "A pagina oficial atual destaca motor Gamma 1.6 Turbo GDI Flex de 176 cv e 27 kgfm, alem de Kappa 1.0 TGDI em versoes.",
+            "confidence": "high",
+            "source": "official_page",
+            "url": "https://www.hyundai.com.br/veiculos/novo-hyundai-creta.html"
+          },
+          {
+            "claim": "A pagina oficial atual informa porta-malas de 422 litros, podendo chegar a 1.401 litros, e destaca SCC, SEW, RCCA, LFA/LKA, FCA e DAW.",
+            "confidence": "high",
+            "source": "official_page",
+            "url": "https://www.hyundai.com.br/veiculos/novo-hyundai-creta.html"
+          }
+        ],
+        "official_model_year_observed": "2026/2027",
+        "official_url": "https://www.hyundai.com.br/veiculos/novo-hyundai-creta.html",
+        "policy": "External sources enrich context but do not override package prices/specs unless explicitly reviewed.",
+        "retrieval_keywords": [
+          "SUV compacto",
+          "Creta",
+          "porta malas 422 litros",
+          "1401 litros",
+          "Gamma 1.6 Turbo GDI",
+          "Kappa 1.0 TGDI",
+          "Bluelink",
+          "SmartSense"
+        ],
+        "retrieval_text": "Hyundai Creta (2026)\nCategoria: SUV. Carroceria normalizada: suv. Propulsao: combustion.\nMotor: 1.0 turbo (e 1.6/2.0 conforme versão). Potencia: 120 (1.0 turbo) cv. Cambio: Automático 6. Consumo/autonomia: ~10–13 km/l.\nPreco do pacote: a partir de R$ 149.620 (R$ 149.620 a R$ 198.120).\nCores: Branco, Prata, Preto, Cinza, Vermelho. Itens e versoes: Bluelink de série, versões Comfort/Limited/Platinum/N Line/Ultimate.\nDescricao do pacote: SUV compacto. Motor 1.0 turbo de 120 cv (opções 1.6/2.0 por versão), automático de 6 marchas. Bluelink de série. Preço de R$ 149.620 a R$ 198.120.\nPontos enriquecidos por fonte oficial: A pagina oficial atual destaca motor Gamma 1.6 Turbo GDI Flex de 176 cv e 27 kgfm, alem de Kappa 1.0 TGDI em versoes. A pagina oficial atual informa porta-malas de 422 litros, podendo chegar a 1.401 litros, e destaca SCC, SEW, RCCA, LFA/LKA, FCA e DAW.\nCasos de uso recomendados: familia que quer SUV compacto com bom pacote de tecnologia cliente que quer porta-malas maior que hatches uso urbano e viagens curtas com conforto\nTrade-offs: preco superior aos compactos HB20/HB20S consumo pode variar bastante conforme motor/versao e uso\nPalavras-chave: SUV compacto, Creta, porta malas 422 litros, 1401 litros, Gamma 1.6 Turbo GDI, Kappa 1.0 TGDI, Bluelink, SmartSense.",
+        "selling_angles": [
+          "SUV compacto com motores 1.0 turbo e 1.6 turbo conforme versoes atuais",
+          "porta-malas de 422 L chegando a 1.401 L com configuracao de bancos na pagina oficial atual",
+          "recursos Hyundai SmartSense e Bluelink fortalecem respostas sobre tecnologia e seguranca"
+        ],
+        "source_file_info": {
+          "markdown_bytes": 156793,
+          "markdown_path": "/Users/enzo/dev/fluxomind-hackathon/.scratch/firecrawl-vehicle-research/pages/hyundai-creta.md",
+          "search_bytes": 2069,
+          "search_path": "/Users/enzo/dev/fluxomind-hackathon/.scratch/firecrawl-vehicle-research/search/hyundai-creta.json"
+        },
+        "source_notes": [
+          "Pagina oficial atual mostra catalogos 2026/2027; manter valores 2026 do pacote como fonte canonica do desafio."
+        ],
+        "tradeoffs": [
+          "preco superior aos compactos HB20/HB20S",
+          "consumo pode variar bastante conforme motor/versao e uso"
+        ],
+        "use_cases": [
+          "familia que quer SUV compacto com bom pacote de tecnologia",
+          "cliente que quer porta-malas maior que hatches",
+          "uso urbano e viagens curtas com conforto"
+        ]
+      },
+      "normalized": {
+        "body_type": "suv",
+        "brand": "Hyundai",
+        "category_original": "SUV",
+        "colors": ["Branco", "Prata", "Preto", "Cinza", "Vermelho"],
+        "display_name": "Hyundai Creta",
+        "features": [
+          "Bluelink de série",
+          "versões Comfort/Limited/Platinum/N Line/Ultimate"
+        ],
+        "fuel_type": "flex",
+        "image_files": [
+          "hyundai_creta.jpg",
+          "hyundai_creta_02.jpg",
+          "hyundai_creta_03.jpg",
+          "hyundai_creta_04.jpg"
+        ],
+        "missing_image_files": [],
+        "model": "Creta",
+        "model_year": 2026,
+        "powertrain_type": "combustion",
+        "price_bucket": "110k-150k",
+        "price_start_brl": 149620
+      },
+      "slug": "hyundai-creta"
+    },
+    {
+      "id": 13,
+      "montadora": "BYD",
+      "modelo": "Dolphin",
+      "categoria": "Hatch elétrico",
+      "ano": 2026,
+      "motor": "Elétrico (bateria BYD Blade)",
+      "potencia_cv": "150–177",
+      "cambio": "Automático (redução única)",
+      "consumo": "Autonomia ~291–405 km (NEDC conforme versão)",
+      "preco_a_partir_rs": 149800,
+      "preco_obs": "a partir de ~R$ 149.800 (SE R$ 159.990)",
+      "cores": "Branco, Prata, Cinza, Azul",
+      "itens": "Carga rápida DC, multimídia rotativa, ADAS",
+      "desc": "Hatch 100% elétrico. Motor elétrico de 150 a 177 cv conforme versão, autonomia de ~291 a 405 km (NEDC). Carga rápida em corrente contínua. A partir de ~R$ 149.800.",
+      "imagem_arquivo": "imagens/byd_dolphin.jpg",
+      "imagens": [
+        "imagens/byd_dolphin.jpg",
+        "imagens/byd_dolphin_02.jpg",
+        "imagens/byd_dolphin_03.jpg",
+        "imagens/byd_dolphin_04.jpg"
+      ],
+      "foto_referencia": "https://commons.wikimedia.org/wiki/Category:BYD_Dolphin",
+      "enrichment": {
+        "audience_tags": [
+          "eletrico",
+          "hatch",
+          "urbano",
+          "eficiencia",
+          "bateria blade"
+        ],
+        "current_external_observation": null,
+        "faq": [
+          {
+            "answer": "Sim. O pacote e a pagina oficial tratam o Dolphin como hatch 100% eletrico com Bateria Blade.",
+            "question": "O Dolphin e eletrico?",
+            "source": "official_page"
+          },
+          {
+            "answer": "Para uso urbano e clientes que querem eletrico mais acessivel, silencioso e tecnologico, desde que tenham rotina de recarga adequada.",
+            "question": "Para quem o Dolphin faz sentido?",
+            "source": "derived"
+          }
+        ],
+        "generated_at": "2026-07-08T18:57:10.757Z",
+        "official_evidence": [
+          {
+            "claim": "A pagina oficial apresenta o Dolphin como hatch eletrico com melhor custo-beneficio da categoria.",
+            "confidence": "high",
+            "source": "official_page",
+            "url": "https://www.byd.com/br/car/dolphin"
+          },
+          {
+            "claim": "A pagina oficial destaca e-Platform 3.0, Bateria Blade, tela touchscreen rotativa de 12,8 polegadas e longa vida da bateria com mais de 5.000 ciclos.",
+            "confidence": "high",
+            "source": "official_page",
+            "url": "https://www.byd.com/br/car/dolphin"
+          }
+        ],
+        "official_model_year_observed": "current",
+        "official_url": "https://www.byd.com/br/car/dolphin",
+        "policy": "External sources enrich context but do not override package prices/specs unless explicitly reviewed.",
+        "retrieval_keywords": [
+          "hatch eletrico",
+          "BYD Dolphin",
+          "Bateria Blade",
+          "e-Platform 3.0",
+          "touchscreen 12,8",
+          "carro eletrico urbano"
+        ],
+        "retrieval_text": "BYD Dolphin (2026)\nCategoria: Hatch elétrico. Carroceria normalizada: hatch. Propulsao: electric.\nMotor: Elétrico (bateria BYD Blade). Potencia: 150–177 cv. Cambio: Automático (redução única). Consumo/autonomia: Autonomia ~291–405 km (NEDC conforme versão).\nPreco do pacote: a partir de R$ 149.800 (a partir de ~R$ 149.800 (SE R$ 159.990)).\nCores: Branco, Prata, Cinza, Azul. Itens e versoes: Carga rápida DC, multimídia rotativa, ADAS.\nDescricao do pacote: Hatch 100% elétrico. Motor elétrico de 150 a 177 cv conforme versão, autonomia de ~291 a 405 km (NEDC). Carga rápida em corrente contínua. A partir de ~R$ 149.800.\nPontos enriquecidos por fonte oficial: A pagina oficial apresenta o Dolphin como hatch eletrico com melhor custo-beneficio da categoria. A pagina oficial destaca e-Platform 3.0, Bateria Blade, tela touchscreen rotativa de 12,8 polegadas e longa vida da bateria com mais de 5.000 ciclos.\nCasos de uso recomendados: cliente que quer entrar em carro eletrico uso urbano com recarga residencial ou planejada cliente que valoriza baixo ruido e tecnologia embarcada\nTrade-offs: depende de rotina de recarga autonomia real varia com uso, clima e velocidade\nPalavras-chave: hatch eletrico, BYD Dolphin, Bateria Blade, e-Platform 3.0, touchscreen 12,8, carro eletrico urbano.",
+        "selling_angles": [
+          "hatch 100% eletrico com Bateria Blade",
+          "e-Platform 3.0 com foco em eficiencia, seguranca e autonomia",
+          "tela touchscreen rotativa de 12,8 polegadas no site oficial"
+        ],
+        "source_file_info": {
+          "markdown_bytes": 11622,
+          "markdown_path": "/Users/enzo/dev/fluxomind-hackathon/.scratch/firecrawl-vehicle-research/pages/byd-dolphin.md",
+          "search_bytes": 2699,
+          "search_path": "/Users/enzo/dev/fluxomind-hackathon/.scratch/firecrawl-vehicle-research/search/byd-dolphin.json"
+        },
+        "source_notes": [],
+        "tradeoffs": [
+          "depende de rotina de recarga",
+          "autonomia real varia com uso, clima e velocidade"
+        ],
+        "use_cases": [
+          "cliente que quer entrar em carro eletrico",
+          "uso urbano com recarga residencial ou planejada",
+          "cliente que valoriza baixo ruido e tecnologia embarcada"
+        ]
+      },
+      "normalized": {
+        "body_type": "hatch",
+        "brand": "BYD",
+        "category_original": "Hatch elétrico",
+        "colors": ["Branco", "Prata", "Cinza", "Azul"],
+        "display_name": "BYD Dolphin",
+        "features": ["Carga rápida DC", "multimídia rotativa", "ADAS"],
+        "fuel_type": "electric",
+        "image_files": [
+          "byd_dolphin.jpg",
+          "byd_dolphin_02.jpg",
+          "byd_dolphin_03.jpg",
+          "byd_dolphin_04.jpg"
+        ],
+        "missing_image_files": [],
+        "model": "Dolphin",
+        "model_year": 2026,
+        "powertrain_type": "electric",
+        "price_bucket": "110k-150k",
+        "price_start_brl": 149800
+      },
+      "slug": "byd-dolphin"
+    },
+    {
+      "id": 14,
+      "montadora": "BYD",
+      "modelo": "Yuan Plus",
+      "categoria": "SUV elétrico",
+      "ano": 2026,
+      "motor": "Elétrico (AWD na linha 2027)",
+      "potencia_cv": "204 (204 cv) / 449 (AWD 2027)",
+      "cambio": "Automático (redução única)",
+      "consumo": "Autonomia ~510–530 km (NEDC)",
+      "preco_a_partir_rs": 269990,
+      "preco_obs": "a partir de R$ 269.990",
+      "cores": "Branco, Prata, Cinza, Azul, Verde",
+      "itens": "Tração integral (2027), teto panorâmico, ADAS",
+      "desc": "SUV compacto 100% elétrico (também conhecido como Atto 3). Versão 2027 com tração integral e 449 cv; autonomia de até ~530 km (NEDC). A partir de R$ 269.990.",
+      "imagem_arquivo": "imagens/byd_yuan_plus.jpg",
+      "imagens": [
+        "imagens/byd_yuan_plus.jpg",
+        "imagens/byd_yuan_plus_02.jpg",
+        "imagens/byd_yuan_plus_03.jpg",
+        "imagens/byd_yuan_plus_04.jpg"
+      ],
+      "foto_referencia": "https://commons.wikimedia.org/wiki/Category:BYD_Yuan_Plus",
+      "enrichment": {
+        "audience_tags": ["eletrico", "SUV", "performance", "familia", "ADAS"],
+        "current_external_observation": null,
+        "faq": [
+          {
+            "answer": "Sim. O pacote informa 204 cv para Yuan Plus e a pagina atual destaca versao AWD de 449 cv; o Dolphin fica em faixa menor, 150-177 cv no pacote.",
+            "question": "O Yuan Plus e mais potente que o Dolphin?",
+            "source": "package"
+          },
+          {
+            "answer": "SUV eletrico com forte desempenho, Bateria Blade, e-Platform 3.0 e proposta familiar/tecnologica.",
+            "question": "Qual o ponto forte do Yuan Plus?",
+            "source": "derived"
+          }
+        ],
+        "generated_at": "2026-07-08T18:57:10.757Z",
+        "official_evidence": [
+          {
+            "claim": "A pagina oficial atual apresenta BYD Yuan Plus AWD e destaca motor de 449 cv com 0-100 km/h em 3,9 segundos.",
+            "confidence": "high",
+            "source": "official_page",
+            "url": "https://www.byd.com/br/car/yuan-plus"
+          },
+          {
+            "claim": "A pagina oficial destaca e-Platform 3.0, Bateria Blade, recursos avancados de ADAS e sistema de trem de forca eletrico 8 em 1.",
+            "confidence": "high",
+            "source": "official_page",
+            "url": "https://www.byd.com/br/car/yuan-plus"
+          }
+        ],
+        "official_model_year_observed": "current",
+        "official_url": "https://www.byd.com/br/car/yuan-plus",
+        "policy": "External sources enrich context but do not override package prices/specs unless explicitly reviewed.",
+        "retrieval_keywords": [
+          "SUV eletrico",
+          "Yuan Plus AWD",
+          "449 cv",
+          "0-100 3,9",
+          "Bateria Blade",
+          "ADAS",
+          "trem de forca 8 em 1"
+        ],
+        "retrieval_text": "BYD Yuan Plus (2026)\nCategoria: SUV elétrico. Carroceria normalizada: suv. Propulsao: electric.\nMotor: Elétrico (AWD na linha 2027). Potencia: 204 (204 cv) / 449 (AWD 2027) cv. Cambio: Automático (redução única). Consumo/autonomia: Autonomia ~510–530 km (NEDC).\nPreco do pacote: a partir de R$ 269.990 (a partir de R$ 269.990).\nCores: Branco, Prata, Cinza, Azul, Verde. Itens e versoes: Tração integral (2027), teto panorâmico, ADAS.\nDescricao do pacote: SUV compacto 100% elétrico (também conhecido como Atto 3). Versão 2027 com tração integral e 449 cv; autonomia de até ~530 km (NEDC). A partir de R$ 269.990.\nPontos enriquecidos por fonte oficial: A pagina oficial atual apresenta BYD Yuan Plus AWD e destaca motor de 449 cv com 0-100 km/h em 3,9 segundos. A pagina oficial destaca e-Platform 3.0, Bateria Blade, recursos avancados de ADAS e sistema de trem de forca eletrico 8 em 1.\nCasos de uso recomendados: familia que quer SUV eletrico cliente que prioriza desempenho forte uso urbano/rodoviario com planejamento de recarga\nTrade-offs: preco alto no catalogo demanda infraestrutura e planejamento de recarga\nPalavras-chave: SUV eletrico, Yuan Plus AWD, 449 cv, 0-100 3,9, Bateria Blade, ADAS, trem de forca 8 em 1.",
+        "selling_angles": [
+          "SUV eletrico com Bateria Blade e e-Platform 3.0",
+          "pagina oficial atual destaca motor de 449 cv e 0-100 km/h em 3,9 s no Yuan Plus AWD",
+          "porta-malas amplo e interior com proposta mais ludica/tecnologica"
+        ],
+        "source_file_info": {
+          "markdown_bytes": 17606,
+          "markdown_path": "/Users/enzo/dev/fluxomind-hackathon/.scratch/firecrawl-vehicle-research/pages/byd-yuan-plus.md",
+          "search_bytes": 2610,
+          "search_path": "/Users/enzo/dev/fluxomind-hackathon/.scratch/firecrawl-vehicle-research/search/byd-yuan-plus.json"
+        },
+        "source_notes": [],
+        "tradeoffs": [
+          "preco alto no catalogo",
+          "demanda infraestrutura e planejamento de recarga"
+        ],
+        "use_cases": [
+          "familia que quer SUV eletrico",
+          "cliente que prioriza desempenho forte",
+          "uso urbano/rodoviario com planejamento de recarga"
+        ]
+      },
+      "normalized": {
+        "body_type": "suv",
+        "brand": "BYD",
+        "category_original": "SUV elétrico",
+        "colors": ["Branco", "Prata", "Cinza", "Azul", "Verde"],
+        "display_name": "BYD Yuan Plus",
+        "features": ["Tração integral (2027)", "teto panorâmico", "ADAS"],
+        "fuel_type": "electric",
+        "image_files": [
+          "byd_yuan_plus.jpg",
+          "byd_yuan_plus_02.jpg",
+          "byd_yuan_plus_03.jpg",
+          "byd_yuan_plus_04.jpg"
+        ],
+        "missing_image_files": [],
+        "model": "Yuan Plus",
+        "model_year": 2026,
+        "powertrain_type": "electric",
+        "price_bucket": "acima-220k",
+        "price_start_brl": 269990
+      },
+      "slug": "byd-yuan-plus"
+    },
+    {
+      "id": 15,
+      "montadora": "BYD",
+      "modelo": "Seal",
+      "categoria": "Sedan elétrico",
+      "ano": 2026,
+      "motor": "Elétrico (RWD ou AWD)",
+      "potencia_cv": "~313 (RWD) / ~530 (AWD)",
+      "cambio": "Automático (redução única)",
+      "consumo": "Autonomia ~510–570 km (NEDC)",
+      "preco_a_partir_rs": 300000,
+      "preco_obs": "referência (~R$ 300.000)",
+      "cores": "Branco, Preto, Cinza, Azul",
+      "itens": "Plataforma e-Platform 3.0, ADAS, alto desempenho",
+      "desc": "Sedan esportivo 100% elétrico. Versões RWD (~313 cv) e AWD (~530 cv), autonomia de ~510 a 570 km (NEDC). Preço de referência a partir de ~R$ 300.000.",
+      "imagem_arquivo": "imagens/byd_seal.jpg",
+      "imagens": [
+        "imagens/byd_seal.jpg",
+        "imagens/byd_seal_02.jpg",
+        "imagens/byd_seal_03.jpg",
+        "imagens/byd_seal_04.jpg"
+      ],
+      "foto_referencia": "https://commons.wikimedia.org/wiki/Category:BYD_Seal",
+      "enrichment": {
+        "audience_tags": [
+          "eletrico",
+          "sedan",
+          "performance",
+          "premium",
+          "tecnologia"
+        ],
+        "current_external_observation": null,
+        "faq": [
+          {
+            "answer": "Dentro do pacote, ele aparece como sedan eletrico de maior preco e maior potencia, com proposta premium e performance.",
+            "question": "O Seal e o eletrico mais premium do catalogo?",
+            "source": "package"
+          },
+          {
+            "answer": "A pagina oficial destaca Bateria Blade e tecnologia CTB, que integra a bateria a estrutura do carro.",
+            "question": "Qual tecnologia de bateria o Seal usa?",
+            "source": "official_page"
+          }
+        ],
+        "generated_at": "2026-07-08T18:57:10.757Z",
+        "official_evidence": [
+          {
+            "claim": "A pagina oficial apresenta o Seal como sedan eletrico com tecnologia CTB, sistema iTAC e e-Platform 3.0.",
+            "confidence": "high",
+            "source": "official_page",
+            "url": "https://www.byd.com/br/car/seal"
+          },
+          {
+            "claim": "A pagina oficial informa carregamento DC de 150 kW, de 30% a 80% em 30 minutos, e tela rotativa de 15,6 polegadas.",
+            "confidence": "high",
+            "source": "official_page",
+            "url": "https://www.byd.com/br/car/seal"
+          }
+        ],
+        "official_model_year_observed": "current",
+        "official_url": "https://www.byd.com/br/car/seal",
+        "policy": "External sources enrich context but do not override package prices/specs unless explicitly reviewed.",
+        "retrieval_keywords": [
+          "sedan eletrico",
+          "BYD Seal",
+          "CTB",
+          "iTAC",
+          "e-Platform 3.0",
+          "Bateria Blade",
+          "Dynaudio",
+          "carregamento DC 150 kW"
+        ],
+        "retrieval_text": "BYD Seal (2026)\nCategoria: Sedan elétrico. Carroceria normalizada: sedan. Propulsao: electric.\nMotor: Elétrico (RWD ou AWD). Potencia: ~313 (RWD) / ~530 (AWD) cv. Cambio: Automático (redução única). Consumo/autonomia: Autonomia ~510–570 km (NEDC).\nPreco do pacote: a partir de R$ 300.000 (referência (~R$ 300.000)).\nCores: Branco, Preto, Cinza, Azul. Itens e versoes: Plataforma e-Platform 3.0, ADAS, alto desempenho.\nDescricao do pacote: Sedan esportivo 100% elétrico. Versões RWD (~313 cv) e AWD (~530 cv), autonomia de ~510 a 570 km (NEDC). Preço de referência a partir de ~R$ 300.000.\nPontos enriquecidos por fonte oficial: A pagina oficial apresenta o Seal como sedan eletrico com tecnologia CTB, sistema iTAC e e-Platform 3.0. A pagina oficial informa carregamento DC de 150 kW, de 30% a 80% em 30 minutos, e tela rotativa de 15,6 polegadas.\nCasos de uso recomendados: cliente que quer sedan eletrico de alta performance uso executivo premium com foco em tecnologia comparacao com eletricos mais caros e sedans esportivos\nTrade-offs: maior preco do catalogo exige rotina de recarga e tem proposta menos pratica para carga alta que SUVs/picapes\nPalavras-chave: sedan eletrico, BYD Seal, CTB, iTAC, e-Platform 3.0, Bateria Blade, Dynaudio, carregamento DC 150 kW.",
+        "selling_angles": [
+          "sedan 100% eletrico com Bateria Blade",
+          "pagina oficial destaca CTB, iTAC e e-Platform 3.0",
+          "carregamento DC de 150 kW de 30% a 80% em 30 minutos segundo pagina oficial"
+        ],
+        "source_file_info": {
+          "markdown_bytes": 14552,
+          "markdown_path": "/Users/enzo/dev/fluxomind-hackathon/.scratch/firecrawl-vehicle-research/pages/byd-seal.md",
+          "search_bytes": 2581,
+          "search_path": "/Users/enzo/dev/fluxomind-hackathon/.scratch/firecrawl-vehicle-research/search/byd-seal.json"
+        },
+        "source_notes": [],
+        "tradeoffs": [
+          "maior preco do catalogo",
+          "exige rotina de recarga e tem proposta menos pratica para carga alta que SUVs/picapes"
+        ],
+        "use_cases": [
+          "cliente que quer sedan eletrico de alta performance",
+          "uso executivo premium com foco em tecnologia",
+          "comparacao com eletricos mais caros e sedans esportivos"
+        ]
+      },
+      "normalized": {
+        "body_type": "sedan",
+        "brand": "BYD",
+        "category_original": "Sedan elétrico",
+        "colors": ["Branco", "Preto", "Cinza", "Azul"],
+        "display_name": "BYD Seal",
+        "features": ["Plataforma e-Platform 3.0", "ADAS", "alto desempenho"],
+        "fuel_type": "electric",
+        "image_files": [
+          "byd_seal.jpg",
+          "byd_seal_02.jpg",
+          "byd_seal_03.jpg",
+          "byd_seal_04.jpg"
+        ],
+        "missing_image_files": [],
+        "model": "Seal",
+        "model_year": 2026,
+        "powertrain_type": "electric",
+        "price_bucket": "acima-220k",
+        "price_start_brl": 300000
+      },
+      "slug": "byd-seal"
+    }
+  ]
+}
