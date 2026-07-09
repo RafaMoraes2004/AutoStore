@@ -3,18 +3,24 @@
 import { useEffect, useMemo, useState } from "react";
 import { api, ApiError } from "@/lib/api";
 import type { Carro } from "@/lib/types";
+import { inferirMotorizacao, type Motorizacao } from "@/lib/format";
 import { CarroCard } from "@/components/CarroCard";
 import { Filtros, type EstadoFiltros } from "@/components/Filtros";
+
+const FILTROS_INICIAIS: EstadoFiltros = {
+  busca: "",
+  montadora: "",
+  categoria: "",
+  motorizacao: "",
+  precoMax: null,
+  ordenacao: "relevancia",
+};
 
 export default function VitrinePage() {
   const [carros, setCarros] = useState<Carro[]>([]);
   const [carregando, setCarregando] = useState(true);
   const [erro, setErro] = useState<string | null>(null);
-  const [filtros, setFiltros] = useState<EstadoFiltros>({
-    busca: "",
-    categoria: "",
-    precoMax: null,
-  });
+  const [filtros, setFiltros] = useState<EstadoFiltros>(FILTROS_INICIAIS);
 
   useEffect(() => {
     let ativo = true;
@@ -44,10 +50,21 @@ export default function VitrinePage() {
     };
   }, []);
 
+  const montadoras = useMemo(
+    () => Array.from(new Set(carros.map((c) => c.montadora))).sort(),
+    [carros]
+  );
+
   const categorias = useMemo(
     () => Array.from(new Set(carros.map((c) => c.categoria))).sort(),
     [carros]
   );
+
+  const motorizacoes = useMemo(() => {
+    const ordem: Motorizacao[] = ["Combustão", "Híbrido", "Elétrico", "Diesel"];
+    const presentes = new Set(carros.map((c) => inferirMotorizacao(c.motor)));
+    return ordem.filter((m) => presentes.has(m));
+  }, [carros]);
 
   const precoMaximo = useMemo(
     () =>
@@ -59,16 +76,36 @@ export default function VitrinePage() {
 
   const carrosFiltrados = useMemo(() => {
     const termo = filtros.busca.trim().toLowerCase();
-    return carros.filter((c) => {
+
+    const filtrados = carros.filter((c) => {
       const casaBusca =
         termo === "" ||
         `${c.montadora} ${c.modelo}`.toLowerCase().includes(termo);
+      const casaMontadora =
+        filtros.montadora === "" || c.montadora === filtros.montadora;
       const casaCategoria =
         filtros.categoria === "" || c.categoria === filtros.categoria;
+      const casaMotorizacao =
+        filtros.motorizacao === "" ||
+        inferirMotorizacao(c.motor) === filtros.motorizacao;
       const casaPreco =
         filtros.precoMax === null || c.preco_a_partir_rs <= filtros.precoMax;
-      return casaBusca && casaCategoria && casaPreco;
+      return (
+        casaBusca &&
+        casaMontadora &&
+        casaCategoria &&
+        casaMotorizacao &&
+        casaPreco
+      );
     });
+
+    if (filtros.ordenacao === "preco-asc") {
+      filtrados.sort((a, b) => a.preco_a_partir_rs - b.preco_a_partir_rs);
+    } else if (filtros.ordenacao === "preco-desc") {
+      filtrados.sort((a, b) => b.preco_a_partir_rs - a.preco_a_partir_rs);
+    }
+
+    return filtrados;
   }, [carros, filtros]);
 
   return (
@@ -86,9 +123,12 @@ export default function VitrinePage() {
 
       <Filtros
         filtros={filtros}
+        montadoras={montadoras}
         categorias={categorias}
+        motorizacoes={motorizacoes}
         precoMaximo={precoMaximo}
         onChange={setFiltros}
+        onLimpar={() => setFiltros(FILTROS_INICIAIS)}
       />
 
       {carregando && <EstadoCarregando />}
@@ -152,7 +192,7 @@ function EstadoVazio() {
     <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-12 text-center">
       <p className="font-medium">Nenhum carro corresponde aos filtros</p>
       <p className="mt-1 text-sm text-[var(--color-text-muted)]">
-        Ajuste a busca, a categoria ou a faixa de preço.
+        Ajuste a busca, os filtros ou a faixa de preço.
       </p>
     </div>
   );
