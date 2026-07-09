@@ -58,6 +58,10 @@ export const api = {
     });
   },
 
+  listarLeads(): Promise<Lead[]> {
+    return request<Lead[]>("/leads");
+  },
+
   perguntarAoChat(pergunta: string): Promise<RespostaChat> {
     return request<RespostaChat>("/chat", {
       method: "POST",
