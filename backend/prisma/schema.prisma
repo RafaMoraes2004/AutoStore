@@ -20,7 +20,7 @@ model Carro {
   potencia_cv       String
   cambio            String
   consumo           String
-  preco_a_partir_rs Float
+  preco_a_partir_rs Int
   preco_obs         String?
   cores             String
   itens             String
@@ -37,6 +37,8 @@ model Carro {
   createdAt         DateTime @default(now())
   updatedAt         DateTime @updatedAt
 
+  @@index([categoria])
+  @@index([preco_a_partir_rs])
   @@map("carros") // Nome da tabela no banco em minúsculo
 }
 

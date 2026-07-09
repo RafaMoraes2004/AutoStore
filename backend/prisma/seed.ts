@@ -4,19 +4,35 @@ import * as path from "path";
 
 const prisma = new PrismaClient();
 
+interface CarroCatalogo {
+  montadora: string;
+  modelo: string;
+  categoria: string;
+  ano: number;
+  motor: string;
+  potencia_cv: string;
+  cambio: string;
+  consumo: string;
+  preco_a_partir_rs: number;
+  preco_obs?: string;
+  cores: string;
+  itens: string;
+  desc: string;
+  imagem_arquivo?: string;
+  imagens: string[];
+  foto_referencia?: string;
+}
+
 async function main() {
   console.log("Iniciando a carga de dados na Continental Motors...");
 
-  // 1. Lê o arquivo JSON
-  const jsonPath = path.join(__dirname, "carros_catalogo.json");
+  const jsonPath = path.join(import.meta.dirname, "carros_catalogo.json");
   const fileData = fs.readFileSync(jsonPath, "utf-8");
-  const data = JSON.parse(fileData);
+  const data = JSON.parse(fileData) as { vehicles: CarroCatalogo[] };
 
-  // 2. Limpa a tabela antes de inserir (evita duplicatas se você rodar o comando duas vezes)
   await prisma.carro.deleteMany();
   console.log("Tabela de carros higienizada.");
 
-  // 3. O JSON fornecido tem os carros dentro da propriedade "vehicles"
   const carros = data.vehicles;
 
   for (const item of carros) {
@@ -36,14 +52,14 @@ async function main() {
         itens: item.itens,
         desc: item.desc,
         imagem_arquivo: item.imagem_arquivo,
-        imagens: item.imagens, // O Prisma mapeia isso automaticamente para um array nativo do PostgreSQL
+        imagens: item.imagens,
         foto_referencia: item.foto_referencia,
       },
     });
   }
 
   console.log(
-    `Sucesso! ${carros.length} veículos foram injetados no banco de dados.`
+    `Sucesso! ${carros.length} veiculos foram injetados no banco de dados.`
   );
 }
 

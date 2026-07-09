@@ -1,22 +1,33 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
+  "type": "module",
+  "main": "src/server.ts",
+  "engines": {
+    "node": ">=20.19.0"
+  },
   "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "tsx src/server.ts",
+    "postinstall": "prisma generate",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "API do AutoStore - catalogo de veiculos e captura de leads.",
   "dependencies": {
-    "dotenv": "^17.4.2"
+    "@prisma/client": "^5.22.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
   },
   "devDependencies": {
-    "@prisma/client": "^5.22.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
     "@types/node": "^26.1.1",
     "prisma": "^5.22.0",
-    "ts-node": "^10.9.2",
     "tsx": "^4.23.0",
     "typescript": "^7.0.2"
   },
