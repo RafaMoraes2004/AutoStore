@@ -1,0 +1,58 @@
+// schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Tabela de Carros (Baseada exatamente no JSON fornecido)
+model Carro {
+  id                Int      @id @default(autoincrement())
+  montadora         String
+  modelo            String
+  categoria         String
+  ano               Int
+  motor             String
+  potencia_cv       String
+  cambio            String
+  consumo           String
+  preco_a_partir_rs Float
+  preco_obs         String?
+  cores             String
+  itens             String
+  desc              String
+  imagem_arquivo    String?
+  
+  // No PostgreSQL, o Prisma suporta Arrays de Strings nativamente
+  imagens           String[]
+  foto_referencia   String?
+
+  // Relacionamento: Um carro pode ter recebido vários interesses (Leads)
+  leads             Lead[]
+
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@map("carros") // Nome da tabela no banco em minúsculo
+}
+
+// Tabela de Leads (Para capturar o interesse do cliente)
+model Lead {
+  id        Int      @id @default(autoincrement())
+  nome      String
+  email     String?  // Opcional, caso o cliente prefira deixar o telefone
+  telefone  String?  // Opcional, caso prefira deixar o email
+  mensagem  String?
+  
+  // Chave Estrangeira: O veículo que o cliente se interessou
+  carroId   Int
+  carro     Carro    @relation(fields: [carroId], references: [id])
+
+  createdAt DateTime @default(now())
+
+  @@map("leads")
+}
