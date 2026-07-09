@@ -109,6 +109,27 @@ app.get("/carros", async (req: Request, res: Response) => {
   }
 });
 
+app.get("/carros/:id", async (req: Request, res: Response) => {
+  try {
+    const id = parseId(req.params.id);
+    if (id === null) {
+      res.status(400).json({ erro: "ID de carro inválido." });
+      return;
+    }
+
+    const carro = await prisma.carro.findUnique({ where: { id } });
+
+    if (!carro) {
+      res.status(404).json({ erro: "Carro não encontrado." });
+      return;
+    }
+
+    res.status(200).json(carro);
+  } catch (error) {
+    res.status(500).json({ erro: "Erro interno ao buscar o carro." });
+  }
+});
+
 app.post("/carros", async (req: Request, res: Response) => {
   try {
     const payload: CarroPayload = req.body;
