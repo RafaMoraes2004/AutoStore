@@ -24,7 +24,7 @@ interface CarroCatalogo {
 }
 
 async function main() {
-  console.log("Iniciando a carga de dados na Continental Motors...");
+  console.log("Iniciando a carga de dados na AutoStore...");
 
   const jsonPath = path.join(import.meta.dirname, "carros_catalogo.json");
   const fileData = fs.readFileSync(jsonPath, "utf-8");

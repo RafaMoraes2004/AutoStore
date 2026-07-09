@@ -24,7 +24,7 @@ function vetorParaSql(vetor: number[]): string {
 }
 
 async function main() {
-  console.log("=== Ingestão do RAG — Continental Motors ===\n");
+  console.log("=== Ingestão do RAG — AutoStore ===\n");
 
   const chunksBase = gerarChunks(MARKDOWN_PATH, JSON_PATH);
   const chunksComparativos = gerarChunksComparativos(JSON_PATH);

@@ -3,6 +3,8 @@ import express from "express";
 import type { Request, Response } from "express";
 import cors from "cors";
 import { Prisma, PrismaClient } from "@prisma/client";
+import { buscarChunksRelevantes } from "./rag/retrieval.js";
+import { responderComContexto } from "./rag/geracao.js";
 
 const app = express();
 const prisma = new PrismaClient();
@@ -366,8 +368,41 @@ app.post("/leads", async (req: Request, res: Response) => {
   }
 });
 
+app.post("/chat", async (req: Request, res: Response) => {
+  try {
+    const { pergunta } = req.body as { pergunta?: unknown };
+
+    const perguntaValida =
+      typeof pergunta === "string" &&
+      pergunta.trim().length > 0 &&
+      pergunta.trim().length <= 500;
+
+    if (!perguntaValida) {
+      res
+        .status(400)
+        .json({ erro: "Pergunta inválida ou ausente (máx. 500 caracteres)." });
+      return;
+    }
+
+    const chunks = await buscarChunksRelevantes(prisma, pergunta.trim());
+    const resposta = await responderComContexto(pergunta.trim(), chunks);
+
+    res.status(200).json({
+      resposta,
+      fontes: chunks.map((c) => ({
+        secao: c.secao,
+        slug: c.slug,
+        carroId: c.carroId,
+        similaridade: Number(c.similaridade.toFixed(4)),
+      })),
+    });
+  } catch (error) {
+    res.status(500).json({ erro: "Erro interno ao processar a pergunta." });
+  }
+});
+
 const PORT = process.env.PORT || 3333;
 
 app.listen(PORT, () => {
-  console.log(`Servidor Continental Motors ativo na porta ${PORT}`);
+  console.log(`Servidor AutoStore ativo na porta ${PORT}`);
 });
