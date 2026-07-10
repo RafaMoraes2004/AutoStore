@@ -1,4 +1,10 @@
-import type { Carro, Lead, NovoLead, RespostaChat } from "./types";
+import type {
+  Carro,
+  Lead,
+  NovoLead,
+  RespostaChat,
+  MensagemHistorico,
+} from "./types";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:3333";
 
@@ -62,10 +68,13 @@ export const api = {
     return request<Lead[]>("/leads");
   },
 
-  perguntarAoChat(pergunta: string): Promise<RespostaChat> {
+  perguntarAoChat(
+    pergunta: string,
+    historico: MensagemHistorico[] = []
+  ): Promise<RespostaChat> {
     return request<RespostaChat>("/chat", {
       method: "POST",
-      body: JSON.stringify({ pergunta }),
+      body: JSON.stringify({ pergunta, historico }),
     });
   },
 };
