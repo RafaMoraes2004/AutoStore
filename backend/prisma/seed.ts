@@ -5,6 +5,7 @@ import * as path from "path";
 const prisma = new PrismaClient();
 
 interface CarroCatalogo {
+  id: number;
   montadora: string;
   modelo: string;
   categoria: string;
@@ -30,7 +31,10 @@ async function main() {
   const fileData = fs.readFileSync(jsonPath, "utf-8");
   const data = JSON.parse(fileData) as { vehicles: CarroCatalogo[] };
 
-  await prisma.carro.deleteMany();
+  // RESTART IDENTITY zera o autoincrement do Postgres, que deleteMany() não faz.
+  // Os ids dos carros precisam bater com o carroId gravado em "embeddings" pela
+  // ingestão do RAG (prisma/ingest.ts), por isso são inseridos explicitamente.
+  await prisma.$executeRaw`TRUNCATE TABLE "leads", "carros" RESTART IDENTITY CASCADE;`;
   console.log("Tabela de carros higienizada.");
 
   const carros = data.vehicles;
@@ -38,6 +42,7 @@ async function main() {
   for (const item of carros) {
     await prisma.carro.create({
       data: {
+        id: item.id,
         montadora: item.montadora,
         modelo: item.modelo,
         categoria: item.categoria,
@@ -47,16 +52,20 @@ async function main() {
         cambio: item.cambio,
         consumo: item.consumo,
         preco_a_partir_rs: item.preco_a_partir_rs,
-        preco_obs: item.preco_obs,
+        preco_obs: item.preco_obs ?? null,
         cores: item.cores,
         itens: item.itens,
         desc: item.desc,
-        imagem_arquivo: item.imagem_arquivo,
+        imagem_arquivo: item.imagem_arquivo ?? null,
         imagens: item.imagens,
-        foto_referencia: item.foto_referencia,
+        foto_referencia: item.foto_referencia ?? null,
       },
     });
   }
+
+  // Ids foram inseridos explicitamente, então a sequence do autoincrement fica
+  // parada em 1; sincroniza para o maior id inserido antes de liberar o uso normal.
+  await prisma.$executeRaw`SELECT setval(pg_get_serial_sequence('"carros"', 'id'), (SELECT MAX(id) FROM "carros"));`;
 
   console.log(
     `Sucesso! ${carros.length} veiculos foram injetados no banco de dados.`
