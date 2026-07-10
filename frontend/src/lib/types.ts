@@ -46,6 +46,11 @@ export interface FonteChat {
   similaridade: number;
 }
 
+export interface MensagemHistorico {
+  autor: "usuario" | "assistente";
+  texto: string;
+}
+
 export interface RespostaChat {
   resposta: string;
   fontes: FonteChat[];
