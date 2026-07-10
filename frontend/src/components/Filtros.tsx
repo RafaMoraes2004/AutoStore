@@ -1,6 +1,7 @@
 "use client";
 
 import type { Motorizacao } from "@/lib/format";
+import { SelectCustom } from "./SelectCustom";
 
 export type Ordenacao = "relevancia" | "preco-asc" | "preco-desc";
 
@@ -46,7 +47,7 @@ export function Filtros({
         </Campo>
 
         <Campo label="Montadora">
-          <Select
+          <SelectCustom
             valor={filtros.montadora}
             onChange={(v) => onChange({ ...filtros, montadora: v })}
             opcoes={montadoras}
@@ -55,7 +56,7 @@ export function Filtros({
         </Campo>
 
         <Campo label="Categoria">
-          <Select
+          <SelectCustom
             valor={filtros.categoria}
             onChange={(v) => onChange({ ...filtros, categoria: v })}
             opcoes={categorias}
@@ -64,7 +65,7 @@ export function Filtros({
         </Campo>
 
         <Campo label="Motorização">
-          <Select
+          <SelectCustom
             valor={filtros.motorizacao}
             onChange={(v) => onChange({ ...filtros, motorizacao: v })}
             opcoes={motorizacoes}
@@ -153,33 +154,6 @@ function Campo({
       </label>
       {children}
     </div>
-  );
-}
-
-function Select({
-  valor,
-  onChange,
-  opcoes,
-  placeholder,
-}: {
-  valor: string;
-  onChange: (v: string) => void;
-  opcoes: string[];
-  placeholder: string;
-}) {
-  return (
-    <select
-      value={valor}
-      onChange={(e) => onChange(e.target.value)}
-      className="w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-base)] px-3 py-2 text-sm outline-none transition-colors focus:border-[var(--color-accent)]"
-    >
-      <option value="">{placeholder}</option>
-      {opcoes.map((op) => (
-        <option key={op} value={op}>
-          {op}
-        </option>
-      ))}
-    </select>
   );
 }
 
