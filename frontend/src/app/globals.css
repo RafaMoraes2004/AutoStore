@@ -1,21 +1,40 @@
 @import "tailwindcss";
 
 @theme {
-  --color-base: #0b0e14;
-  --color-surface: #141922;
-  --color-surface-2: #1c222e;
-  --color-border: #2a313f;
+  --color-base: var(--base);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
   --color-accent: #3b82f6;
   --color-accent-hover: #2563eb;
-  --color-text: #f1f4f9;
-  --color-text-muted: #9aa4b5;
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
 
   --font-display: var(--font-display), system-ui, sans-serif;
   --font-sans: var(--font-sans), system-ui, sans-serif;
 }
 
-:root {
+/* Tema escuro (padrão) — showroom noturno */
+:root,
+:root[data-theme="dark"] {
+  --base: #0b0e14;
+  --surface: #141922;
+  --surface-2: #1c222e;
+  --border: #2a313f;
+  --text: #f1f4f9;
+  --text-muted: #9aa4b5;
   color-scheme: dark;
+}
+
+/* Tema claro — showroom diurno */
+:root[data-theme="light"] {
+  --base: #f7f8fa;
+  --surface: #ffffff;
+  --surface-2: #eef1f5;
+  --border: #dce1e8;
+  --text: #101623;
+  --text-muted: #5a6472;
+  color-scheme: light;
 }
 
 html {
@@ -27,6 +46,7 @@ body {
   color: var(--color-text);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 @media (prefers-reduced-motion: reduce) {
