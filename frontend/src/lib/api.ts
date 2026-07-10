@@ -1,6 +1,7 @@
 import type {
   Carro,
   Lead,
+  NovoCarro,
   NovoLead,
   RespostaChat,
   MensagemHistorico,
@@ -55,6 +56,26 @@ export const api = {
 
   buscarCarro(id: number): Promise<Carro> {
     return request<Carro>(`/carros/${id}`);
+  },
+
+  criarCarro(carro: NovoCarro): Promise<Carro> {
+    return request<Carro>("/carros", {
+      method: "POST",
+      body: JSON.stringify(carro),
+    });
+  },
+
+  atualizarCarro(id: number, dados: Partial<NovoCarro>): Promise<Carro> {
+    return request<Carro>(`/carros/${id}`, {
+      method: "PATCH",
+      body: JSON.stringify(dados),
+    });
+  },
+
+  removerCarro(id: number): Promise<void> {
+    return request<void>(`/carros/${id}`, {
+      method: "DELETE",
+    });
   },
 
   criarLead(lead: NovoLead): Promise<Lead> {

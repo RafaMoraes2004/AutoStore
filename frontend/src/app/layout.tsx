@@ -54,6 +54,12 @@ export default function RootLayout({
                   Leads
                 </Link>
                 <Link
+                  href="/admin/carros"
+                  className="text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text)]"
+                >
+                  Admin
+                </Link>
+                <Link
                   href="/chat"
                   className="rounded-full bg-[var(--color-accent)] px-4 py-2 font-medium text-white transition-colors hover:bg-[var(--color-accent-hover)]"
                 >
