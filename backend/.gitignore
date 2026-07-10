@@ -1,5 +1,20 @@
-node_modules
-# Keep environment variables out of version control
-.env
+# Dependências
+node_modules/
 
-/generated/prisma
+# Variáveis de ambiente (NUNCA commitar — contém GEMINI_API_KEY)
+.env
+.env.local
+.env.*.local
+
+# Build / saída
+dist/
+build/
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
