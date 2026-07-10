@@ -99,7 +99,10 @@ export default function LeadsPage() {
 
 function LeadCard({ lead }: { lead: Lead }) {
   return (
-    <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5">
+    <div
+      data-testid="lead-card"
+      className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5"
+    >
       <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div className="flex flex-col gap-2">
           <div>
