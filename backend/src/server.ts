@@ -4,7 +4,7 @@ import type { Request, Response } from "express";
 import cors from "cors";
 import { Prisma, PrismaClient } from "@prisma/client";
 import { buscarChunksRelevantes } from "./rag/retrieval.js";
-import { responderComContexto } from "./rag/geracao.js";
+import { responderComContexto, type MensagemHistorico } from "./rag/geracao.js";
 
 const app = express();
 const prisma = new PrismaClient();
@@ -391,7 +391,10 @@ app.post("/leads", async (req: Request, res: Response) => {
 
 app.post("/chat", async (req: Request, res: Response) => {
   try {
-    const { pergunta } = req.body as { pergunta?: unknown };
+    const { pergunta, historico } = req.body as {
+      pergunta?: unknown;
+      historico?: unknown;
+    };
 
     const perguntaValida =
       typeof pergunta === "string" &&
@@ -405,8 +408,41 @@ app.post("/chat", async (req: Request, res: Response) => {
       return;
     }
 
-    const chunks = await buscarChunksRelevantes(prisma, pergunta.trim());
-    const resposta = await responderComContexto(pergunta.trim(), chunks);
+    const historicoValidado: MensagemHistorico[] = Array.isArray(historico)
+      ? historico
+          .filter(
+            (m): m is MensagemHistorico =>
+              m !== null &&
+              typeof m === "object" &&
+              (m.autor === "usuario" || m.autor === "assistente") &&
+              typeof m.texto === "string" &&
+              m.texto.trim().length > 0
+          )
+          .slice(-6)
+      : [];
+
+    const ultimaPerguntaUsuario = [...historicoValidado]
+      .reverse()
+      .find((m) => m.autor === "usuario");
+
+    const textoPergunta = pergunta.trim();
+    const ehFollowUp =
+      textoPergunta.length < 40 ||
+      /\b(ele|dele|nele|esse|este|isso|mais detalhes|e o|e a|também)\b/i.test(
+        textoPergunta
+      );
+
+    const queryBusca =
+      ehFollowUp && ultimaPerguntaUsuario
+        ? `${ultimaPerguntaUsuario.texto} ${textoPergunta}`
+        : textoPergunta;
+
+    const chunks = await buscarChunksRelevantes(prisma, queryBusca);
+    const resposta = await responderComContexto(
+      pergunta.trim(),
+      chunks,
+      historicoValidado
+    );
 
     res.status(200).json({
       resposta,
