@@ -131,6 +131,18 @@ O servidor sobe em `http://localhost:3333`.
 
 ---
 
+## Testes
+
+```bash
+npm test              # Vitest (unitários + integração), roda uma vez
+npm run test:watch    # modo watch
+npm run test:coverage # com relatório de cobertura
+```
+
+Os testes de integração mockam o Prisma (`vi.mock`) e o cliente Gemini — **não** exigem Postgres nem `GEMINI_API_KEY` configurados para rodar. Cobrem validação de payload, as rotas de carros/leads/chat (200/400/404/409/429) e o rate limiting do `/chat`.
+
+---
+
 ## Rotas da API
 
 ### Catálogo
@@ -237,13 +249,25 @@ A temperatura de geração é baixa (0.2) e o prompt instrui o modelo a responde
 
 O cliente Gemini implementa retry com backoff no erro 429, e a ingestão respeita o limite do tier gratuito (100 req/min). A ingestão é idempotente: pode ser re-executada sem duplicar dados.
 
+### Hardening de segurança
+
+Aplicado após auditoria dedicada (ver histórico de commits):
+
+- **`helmet`** para headers HTTP básicos (`X-Content-Type-Options`, `X-Frame-Options` etc.).
+- **CORS restrito** à origem do front-end (`FRONTEND_URL`, default `http://localhost:3000`) — nunca `*`.
+- **Rate limiting em `/chat`** (`express-rate-limit`, 10 req/min por IP) contra abuso da cota paga do Gemini.
+- **Mitigação de prompt injection**: a instrução de sistema vai no campo `systemInstruction` da API do Gemini (separado estruturalmente do conteúdo do usuário), com uma regra explícita instruindo o modelo a tratar contexto/histórico/pergunta como dado, nunca como instrução.
+- **Validação com teto de tamanho** em todos os campos de texto livre (carros, leads, histórico do chat) — nenhum campo aceita string de tamanho ilimitado.
+- Toda rota responde com mensagem de erro genérica no `catch`, nunca stack trace ou detalhe do Postgres/Prisma.
+
 ---
 
 ## Limitações conhecidas
 
 - A base indexada é o markdown enriquecido derivado da base técnica em PDF; contém todo o conteúdo do PDF original mais contexto adicional.
 - O tier gratuito do Gemini limita 100 requisições de embedding por minuto; a ingestão foi calibrada para isso.
-- O índice HNSW é gerenciado via SQL na migration, pois o Prisma não descreve índices vetoriais nativamente.
+- A migration inicial cria um índice HNSW (`vector_cosine_ops`) via SQL, já que o Prisma não descreve índices vetoriais nativamente — mas uma segunda migration o remove. Com ~121 chunks, a busca exaustiva (sem índice aproximado) é mais rápida e retorna vizinhos exatos, não aproximados; HNSW só compensaria em escala muito maior.
+- `/admin/*` e `GET /leads` não têm autenticação (documentado explicitamente no código e aceito conscientemente — fora do escopo do desafio; ver auditoria de segurança no histórico de commits).
 
 ---
 
@@ -256,19 +280,28 @@ backend/
 │   ├── seed.ts              # carga dos 15 carros
 │   ├── ingest.ts            # ingestão do RAG (embeddings)
 │   ├── migrations/          # migrations (com setup do pgvector)
+│   ├── carros_catalogo.json # dataset original dos 15 carros
 │   └── rag/
 │       ├── base_tecnica.md
 │       └── carros_enriched.json
 ├── src/
-│   ├── server.ts            # rotas HTTP
+│   ├── server.ts            # bootstrap: dotenv + app.listen
+│   ├── app.ts                # instância do Express + todas as rotas HTTP
 │   ├── lib/
+│   │   ├── prisma.ts        # singleton do PrismaClient
+│   │   ├── validation.ts    # validação de payloads (carros, leads)
 │   │   └── gemini.ts        # cliente Gemini (embeddings + geração)
 │   └── rag/
 │       ├── chunking.ts      # chunking por seção
 │       ├── comparativos.ts  # chunks comparativos sintéticos
 │       ├── retrieval.ts     # busca vetorial (pgvector)
+│       ├── queryBusca.ts    # detecção de follow-up e enriquecimento de query
 │       └── geracao.ts       # montagem do prompt + resposta
-├── .env                     # (não versionado)
+├── tests/
+│   ├── unit/                # validação, prompt, follow-up (sem I/O)
+│   └── integration/         # rotas via Supertest, Prisma/Gemini mockados
+├── .env                     # (não versionado — copie de .env.example)
+├── .env.example
 ├── package.json
 └── tsconfig.json
 ```
