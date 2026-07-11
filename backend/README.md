@@ -66,7 +66,8 @@ Crie um arquivo `.env` na raiz do backend:
 DATABASE_URL="postgresql://postgres:123@localhost:5432/continentalmotors?schema=public"
 GEMINI_API_KEY="sua_chave_do_gemini_aqui"
 PORT=3333
-# Opcional: origem permitida para CORS (default: *)
+# Opcional: origem permitida para CORS (default: http://localhost:3000).
+# Configure com a URL real do front-end em produção.
 # FRONTEND_URL="http://localhost:3000"
 ```
 

@@ -1,5 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { parseId, validarLead } from "../../src/lib/validation.js";
+import {
+  isTextoCurtoValido,
+  isTextoLongoValido,
+  parseId,
+  validarLead,
+} from "../../src/lib/validation.js";
 
 describe("parseId", () => {
   it("aceita inteiros positivos em formato string", () => {
@@ -171,5 +176,40 @@ describe("validarLead", () => {
       mensagem: "a".repeat(1001),
     });
     expect(resultado.valido).toBe(false);
+  });
+});
+
+describe("isTextoCurtoValido", () => {
+  it("aceita texto normal dentro do limite", () => {
+    expect(isTextoCurtoValido("Toyota")).toBe(true);
+  });
+
+  it("rejeita string vazia", () => {
+    expect(isTextoCurtoValido("")).toBe(false);
+    expect(isTextoCurtoValido("   ")).toBe(false);
+  });
+
+  it("rejeita texto acima de 200 caracteres (proteção contra abuso de payload)", () => {
+    expect(isTextoCurtoValido("a".repeat(201))).toBe(false);
+    expect(isTextoCurtoValido("a".repeat(200))).toBe(true);
+  });
+
+  it("rejeita valores que não são string", () => {
+    expect(isTextoCurtoValido(123)).toBe(false);
+    expect(isTextoCurtoValido(null)).toBe(false);
+  });
+});
+
+describe("isTextoLongoValido", () => {
+  it("aceita texto longo dentro do limite", () => {
+    expect(isTextoLongoValido("a".repeat(5000))).toBe(true);
+  });
+
+  it("rejeita texto acima de 5000 caracteres", () => {
+    expect(isTextoLongoValido("a".repeat(5001))).toBe(false);
+  });
+
+  it("rejeita string vazia", () => {
+    expect(isTextoLongoValido("")).toBe(false);
   });
 });
