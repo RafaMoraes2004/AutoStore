@@ -32,6 +32,17 @@ export function isNonEmptyString(value: unknown): value is string {
   return typeof value === "string" && value.trim().length > 0;
 }
 
+const LIMITE_TEXTO_CURTO = 200;
+const LIMITE_TEXTO_LONGO = 5000;
+
+export function isTextoCurtoValido(value: unknown): value is string {
+  return isNonEmptyString(value) && value.trim().length <= LIMITE_TEXTO_CURTO;
+}
+
+export function isTextoLongoValido(value: unknown): value is string {
+  return isNonEmptyString(value) && value.trim().length <= LIMITE_TEXTO_LONGO;
+}
+
 export function isValidAno(value: unknown): value is number {
   return (
     typeof value === "number" &&
@@ -55,18 +66,18 @@ export const CARRO_CAMPOS_OBRIGATORIOS: Record<
   string,
   (value: unknown) => boolean
 > = {
-  montadora: isNonEmptyString,
-  modelo: isNonEmptyString,
-  categoria: isNonEmptyString,
+  montadora: isTextoCurtoValido,
+  modelo: isTextoCurtoValido,
+  categoria: isTextoCurtoValido,
   ano: isValidAno,
-  motor: isNonEmptyString,
-  potencia_cv: isNonEmptyString,
-  cambio: isNonEmptyString,
-  consumo: isNonEmptyString,
+  motor: isTextoCurtoValido,
+  potencia_cv: isTextoCurtoValido,
+  cambio: isTextoCurtoValido,
+  consumo: isTextoCurtoValido,
   preco_a_partir_rs: isValidPreco,
-  cores: isNonEmptyString,
-  itens: isNonEmptyString,
-  desc: isNonEmptyString,
+  cores: isTextoLongoValido,
+  itens: isTextoLongoValido,
+  desc: isTextoLongoValido,
 };
 
 export const CARRO_CAMPOS_OPCIONAIS_NULLABLE = [

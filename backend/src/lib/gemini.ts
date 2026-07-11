@@ -87,7 +87,10 @@ export async function gerarEmbedding(
   return normalizar(valores);
 }
 
-export async function gerarResposta(prompt: string): Promise<string> {
+export async function gerarResposta(
+  instrucaoSistema: string,
+  prompt: string
+): Promise<string> {
   const url = `${GEMINI_BASE}/models/${GENERATION_MODEL}:generateContent`;
 
   const resposta = await fetchComRetry(url, {
@@ -97,6 +100,7 @@ export async function gerarResposta(prompt: string): Promise<string> {
       "x-goog-api-key": getApiKey(),
     },
     body: JSON.stringify({
+      systemInstruction: { parts: [{ text: instrucaoSistema }] },
       contents: [{ parts: [{ text: prompt }] }],
       generationConfig: {
         temperature: 0.2,

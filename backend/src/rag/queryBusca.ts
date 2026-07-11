@@ -1,6 +1,7 @@
 import type { MensagemHistorico } from "./geracao.js";
 
 const LIMITE_HISTORICO = 6;
+const LIMITE_TAMANHO_MENSAGEM = 2000;
 const LIMITE_TAMANHO_FOLLOW_UP = 40;
 const PADRAO_FOLLOW_UP =
   /\b(ele|dele|nele|esse|este|isso|mais detalhes|e o|e a|também)\b/i;
@@ -15,7 +16,8 @@ export function validarHistorico(historico: unknown): MensagemHistorico[] {
         typeof m === "object" &&
         (m.autor === "usuario" || m.autor === "assistente") &&
         typeof m.texto === "string" &&
-        m.texto.trim().length > 0
+        m.texto.trim().length > 0 &&
+        m.texto.trim().length <= LIMITE_TAMANHO_MENSAGEM
     )
     .slice(-LIMITE_HISTORICO);
 }

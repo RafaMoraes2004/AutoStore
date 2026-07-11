@@ -39,6 +39,16 @@ describe("validarHistorico", () => {
     ]);
   });
 
+  it("descarta mensagens com texto acima de 2000 caracteres (proteção contra inflar o prompt)", () => {
+    const historico = [
+      { autor: "usuario", texto: "a".repeat(2001) },
+      { autor: "usuario", texto: "pergunta normal" },
+    ];
+    expect(validarHistorico(historico)).toEqual([
+      { autor: "usuario", texto: "pergunta normal" },
+    ]);
+  });
+
   it("mantém apenas as últimas 6 mensagens", () => {
     const historico = Array.from({ length: 8 }, (_, i) => ({
       autor: i % 2 === 0 ? "usuario" : "assistente",

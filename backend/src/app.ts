@@ -1,6 +1,8 @@
 import express from "express";
 import type { Request, Response } from "express";
 import cors from "cors";
+import helmet from "helmet";
+import rateLimit from "express-rate-limit";
 import { Prisma } from "@prisma/client";
 import { prisma } from "./lib/prisma.js";
 import {
@@ -20,9 +22,24 @@ import { construirQueryBusca, validarHistorico } from "./rag/queryBusca.js";
 
 export const app = express();
 
-const corsOrigin = process.env.FRONTEND_URL || "*";
+app.use(helmet());
+
+// Sem FRONTEND_URL configurada, cai para a origem padrão do dev server do
+// Next.js — nunca para "*" (RNF02/AppSec: evita que qualquer site de
+// terceiros consiga ler respostas da API via JS no navegador de um visitante).
+const corsOrigin = process.env.FRONTEND_URL || "http://localhost:3000";
 app.use(cors({ origin: corsOrigin }));
 app.use(express.json({ limit: "15kb" }));
+
+const limitadorChat = rateLimit({
+  windowMs: 60 * 1000,
+  limit: 10,
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: {
+    erro: "Muitas perguntas em pouco tempo. Aguarde um instante e tente novamente.",
+  },
+});
 
 app.get("/carros", async (req: Request, res: Response) => {
   try {
@@ -294,7 +311,7 @@ app.post("/leads", async (req: Request, res: Response) => {
   }
 });
 
-app.post("/chat", async (req: Request, res: Response) => {
+app.post("/chat", limitadorChat, async (req: Request, res: Response) => {
   try {
     const { pergunta, historico } = req.body as {
       pergunta?: unknown;
