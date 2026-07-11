@@ -314,7 +314,7 @@ function Secao({
 }) {
   return (
     <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5">
-      <h2 className="mb-4 font-[family-name:var(--font-display)] text-base font-semibold">
+      <h2 className="mb-4 font-[family-name:var(--font-display)] text-[1rem] font-semibold">
         {titulo}
       </h2>
       {children}

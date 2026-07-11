@@ -11,6 +11,8 @@ import { api, ApiError } from "@/lib/api";
 import type { Carro } from "@/lib/types";
 import { formatarPreco } from "@/lib/format";
 import { ConfirmDialog } from "@/components/admin/ConfirmDialog";
+import { EstadoErro } from "@/components/EstadoErro";
+import { EstadoVazio } from "@/components/EstadoVazio";
 
 const MENSAGENS_SUCESSO: Record<string, string> = {
   criado: "Carro cadastrado com sucesso.",
@@ -101,23 +103,13 @@ export default function AdminCarrosPage() {
 
       {carregando && <ListaCarregando />}
 
-      {erro && !carregando && (
-        <div className="rounded-xl border border-red-500/30 bg-red-500/5 p-8 text-center">
-          <p className="font-medium text-red-400">{erro}</p>
-          <p className="mt-1 text-sm text-[var(--color-text-muted)]">
-            Verifique se o servidor está ativo e tente novamente.
-          </p>
-        </div>
-      )}
+      {erro && !carregando && <EstadoErro mensagem={erro} />}
 
       {!carregando && !erro && carros.length === 0 && (
-        <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-12 text-center">
-          <p className="font-medium">Nenhum carro cadastrado ainda</p>
-          <p className="mt-1 text-sm text-[var(--color-text-muted)]">
-            Clique em “Novo carro” para adicionar o primeiro veículo ao
-            catálogo.
-          </p>
-        </div>
+        <EstadoVazio
+          titulo="Nenhum carro cadastrado ainda"
+          descricao="Clique em “Novo carro” para adicionar o primeiro veículo ao catálogo."
+        />
       )}
 
       {!carregando && !erro && carros.length > 0 && (
