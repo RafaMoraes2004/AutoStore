@@ -3,6 +3,7 @@
 // ATENÇÃO: sem autenticação — ver nota em /admin/carros/page.tsx.
 
 import { use, useEffect, useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { api, ApiError } from "@/lib/api";
 import type { Carro, NovoCarro } from "@/lib/types";
@@ -76,8 +77,14 @@ export default function EditarCarroPage({
       {carregando && <FormularioCarregando />}
 
       {erro && !carregando && (
-        <div className="rounded-xl border border-red-500/30 bg-red-500/5 p-8 text-center">
-          <p className="font-medium text-red-400">{erro}</p>
+        <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-12 text-center">
+          <p className="font-medium">{erro}</p>
+          <Link
+            href="/admin/carros"
+            className="mt-4 inline-block text-sm text-[var(--color-accent)] hover:underline"
+          >
+            ← Voltar à administração
+          </Link>
         </div>
       )}
 

@@ -107,7 +107,7 @@ export function ChatUI() {
                 enviar(entrada);
               }
             }}
-            placeholder="Pergunte sobre os carros do catálogo..."
+            placeholder="Pergunte sobre os carros..."
             rows={1}
             className="max-h-32 flex-1 resize-none bg-transparent px-3 py-2 text-sm outline-none"
           />

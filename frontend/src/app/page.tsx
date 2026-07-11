@@ -6,6 +6,8 @@ import type { Carro } from "@/lib/types";
 import { inferirMotorizacao, type Motorizacao } from "@/lib/format";
 import { CarroCard } from "@/components/CarroCard";
 import { Filtros, type EstadoFiltros } from "@/components/Filtros";
+import { EstadoErro } from "@/components/EstadoErro";
+import { EstadoVazio } from "@/components/EstadoVazio";
 
 const FILTROS_INICIAIS: EstadoFiltros = {
   busca: "",
@@ -135,7 +137,12 @@ export default function VitrinePage() {
 
       {erro && !carregando && <EstadoErro mensagem={erro} />}
 
-      {!carregando && !erro && carrosFiltrados.length === 0 && <EstadoVazio />}
+      {!carregando && !erro && carrosFiltrados.length === 0 && (
+        <EstadoVazio
+          titulo="Nenhum carro corresponde aos filtros"
+          descricao="Ajuste a busca, os filtros ou a faixa de preço."
+        />
+      )}
 
       {!carregando && !erro && carrosFiltrados.length > 0 && (
         <>
@@ -176,24 +183,3 @@ function EstadoCarregando() {
   );
 }
 
-function EstadoErro({ mensagem }: { mensagem: string }) {
-  return (
-    <div className="rounded-xl border border-red-500/30 bg-red-500/5 p-8 text-center">
-      <p className="font-medium text-red-400">{mensagem}</p>
-      <p className="mt-1 text-sm text-[var(--color-text-muted)]">
-        Verifique se o servidor está ativo e tente novamente.
-      </p>
-    </div>
-  );
-}
-
-function EstadoVazio() {
-  return (
-    <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-12 text-center">
-      <p className="font-medium">Nenhum carro corresponde aos filtros</p>
-      <p className="mt-1 text-sm text-[var(--color-text-muted)]">
-        Ajuste a busca, os filtros ou a faixa de preço.
-      </p>
-    </div>
-  );
-}

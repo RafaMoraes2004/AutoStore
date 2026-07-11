@@ -5,6 +5,8 @@ import Link from "next/link";
 import { api, ApiError } from "@/lib/api";
 import type { Lead } from "@/lib/types";
 import { formatarPreco } from "@/lib/format";
+import { EstadoErro } from "@/components/EstadoErro";
+import { EstadoVazio } from "@/components/EstadoVazio";
 
 function formatarData(iso: string): string {
   return new Date(iso).toLocaleString("pt-BR", {
@@ -62,23 +64,13 @@ export default function LeadsPage() {
 
       {carregando && <LeadsCarregando />}
 
-      {erro && !carregando && (
-        <div className="rounded-xl border border-red-500/30 bg-red-500/5 p-8 text-center">
-          <p className="font-medium text-red-400">{erro}</p>
-          <p className="mt-1 text-sm text-[var(--color-text-muted)]">
-            Verifique se o servidor está ativo e tente novamente.
-          </p>
-        </div>
-      )}
+      {erro && !carregando && <EstadoErro mensagem={erro} />}
 
       {!carregando && !erro && leads.length === 0 && (
-        <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-12 text-center">
-          <p className="font-medium">Nenhum lead ainda</p>
-          <p className="mt-1 text-sm text-[var(--color-text-muted)]">
-            Quando um cliente demonstrar interesse por um carro, ele aparece
-            aqui.
-          </p>
-        </div>
+        <EstadoVazio
+          titulo="Nenhum lead ainda"
+          descricao="Quando um cliente demonstrar interesse por um carro, ele aparece aqui."
+        />
       )}
 
       {!carregando && !erro && leads.length > 0 && (
